@@ -1,9 +1,9 @@
 <?php
 /*
 Plugin Name:  WP Block Revealer
-Plugin URI:   https://m.pertici.fr/
+Plugin URI:   https://github.com/maxpertici/wp-block-revealer
 Description:  —
-Version:      0.1.0
+Version:      0.2.0
 Author:       Maxime Pertici
 Author URI:   https://m.pertici.fr
 Contributors:
@@ -13,7 +13,6 @@ Text Domain:  wp-block-revealer
 Domain Path:  /languages
 Copyright 219-2020 WP Block Revealer
 */
-
 
 defined( 'ABSPATH' ) or	die();
 

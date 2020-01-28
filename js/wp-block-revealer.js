@@ -6,8 +6,6 @@ jQuery(document).ready(function($){
         // 18 : Alt
         // 66 : B
         // 82 : R
-
-        // console.log( e );
         
         // Ctrl + Alt + R
         if( e.ctrlKey && e.altKey && e.which == 82 ){

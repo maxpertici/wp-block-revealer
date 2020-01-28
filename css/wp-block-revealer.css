@@ -4,22 +4,6 @@ body.wp-block-revealer .editor-styles-wrapper .wp-block:not([data-type="core/col
 }
 
 
-/* wp-block editor-block-list__block block-editor-block-list__block */
-
-
-/*
-body.wp-block-revealer .block-editor-block-list__layout > .block-editor-block-list__block{
-    box-shadow: 0 0 0 1px red;   
-}
-
-body.wp-block-revealer .editor-styles-wrapper .block-editor-inner-blocks > .block-editor-block-list__layout{
-    box-shadow: inset 0 0 0 4px #ecb92b;
-    
-}
-*/
-
-
-
 body.wp-block-revealer .editor-styles-wrapper [data-type="core/columns"].is-selected,
 
 body.wp-block-revealer .editor-styles-wrapper [data-type="core/column"].is-selected,

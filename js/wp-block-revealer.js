@@ -9,6 +9,7 @@ jQuery(document).ready(function($){
 
         // console.log( e );
         
+        // Ctrl + Alt + R
         if( e.ctrlKey && e.altKey && e.which == 82 ){
             $('body').toggleClass('wp-block-revealer');
         }

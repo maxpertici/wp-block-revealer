@@ -1,6 +1,6 @@
 === WP Block Revealer ===
 Contributors: maxpertici
-Donate link: https://www.paypal.me/audrasjb
+Donate link: 
 Tags: Gutenberg, Blocks, UI,
 Requires at least: 5.2
 Tested up to: 5.3
@@ -11,10 +11,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 
 == Description ==
-Extend Gutenberg Reusable Blocks feature with a complete admin panel, widgets, shortcodes and PHP functions.
+Hightlight your blocks and stop clicking everywhere to find them.
+
 
 == Installation ==
 1. Install the plugin and activate.
+2. Use shortcut : Ctrl + Alt + R
+
+
+== Screenshots ==
+1. Result with simple blocks
+2. Result with columns
 
 
 == Changelog ==

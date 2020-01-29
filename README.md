@@ -12,7 +12,11 @@ Hightlight your blocks and stop clicking everywhere to find them.
 2. Use shortcut : Ctrl + Alt + R
 
 ## Screenshots
+
+Result with simple blocks
 ![Result with simple blocks](/.wordpress.org/screenshot-1.jpg?raw=true "Result wioth simple blocks")
+
+Result with columns block
 ![Result with columns block](/.wordpress.org/screenshot-2.jpg?raw=true "Result wioth simple blocks")
 
 ## Changelog

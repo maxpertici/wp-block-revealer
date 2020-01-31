@@ -14,12 +14,22 @@ Hightlight your blocks and stop clicking everywhere to find them.
 ## Screenshots
 
 Result with simple blocks
-![Result with simple blocks](/.wordpress.org/screenshot-1.jpg?raw=true "Result wioth simple blocks")
+![Result with simple blocks](/.wordpress.org/screenshot-1.jpg?raw=true "Result with simple blocks")
 
 Result with columns block
-![Result with columns block](/.wordpress.org/screenshot-2.jpg?raw=true "Result wioth simple blocks")
+![Result with columns block](/.wordpress.org/screenshot-2.jpg?raw=true "Result with simple blocks")
 
 ## Changelog
+
+### 0.5.0
+* readme fix
+* screenshots replacement
+
+### 0.4.0
+* Preparation for wp.org
+
+### 0.3.0
+* Improve read.me
 
 ### 0.2.0
 * Improve highlights for columns

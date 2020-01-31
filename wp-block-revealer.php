@@ -2,8 +2,8 @@
 /*
 Plugin Name:  WP Block Revealer
 Plugin URI:   https://github.com/maxpertici/wp-block-revealer
-Description:  —
-Version:      0.4.0
+Description:  Reveal blocks of Gutenberg Editor. Helps you work efficiently.
+Version:      0.5.0
 Author:       Maxime Pertici
 Author URI:   https://m.pertici.fr
 Contributors:

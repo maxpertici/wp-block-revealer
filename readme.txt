@@ -26,6 +26,16 @@ Hightlight your blocks and stop clicking everywhere to find them.
 
 == Changelog ==
 
+= 0.5.0 =
+* readme fix
+* screenshots replacement
+
+= 0.4.0 =
+* Preparation for wp.org
+
+= 0.3.0 =
+* Improve read.me
+
 = 0.2.0 =
 * Improve highlights for columns
 * Load assets only for gutenberg editor

@@ -1,0 +1,1 @@
+../wp-plugin-git-svn-sync/sync.sh --plugin-name="wp-block-revealer" --svn-user=maxpertici --git-repo="https://github.com/maxpertici/wp-block-revealer"

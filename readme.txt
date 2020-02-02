@@ -22,9 +22,17 @@ Hightlight your blocks and stop clicking everywhere to find them.
 == Screenshots ==
 1. Result with simple blocks
 2. Result with columns
+2. Result with group
 
 
 == Changelog ==
+
+= 0.7.0 =
+* group support
+* add screenshot 3
+
+= 0.6.0 =
+* screenshots replacement
 
 = 0.5.0 =
 * readme fix

@@ -4,5 +4,4 @@
 .DS_Store
 .distignore
 .gitignore
-readme.md
-git-towp-org.sh
+README.md

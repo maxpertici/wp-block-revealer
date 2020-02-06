@@ -16,6 +16,8 @@ Copyright 219-2020 WP Block Revealer
 
 defined( 'ABSPATH' ) or	die();
 
+define("WPBLKR_VERSION", "0.7.0");
+
 /**
  * Tell WP what to do when plugin is activated.
  *
@@ -91,8 +93,8 @@ add_action( 'after_setup_theme', 'wp_blckr_setup' );
 function wp_blckr_admin_scripts( $hook ) {
     
     if( wp_blckr_gutenberg_is_active() ){
-        wp_enqueue_script( 'wp-block-revealer-script' , plugin_dir_url( __FILE__ ) . '/js/wp-block-revealer.js', array('jquery'), '1.0' );
-        wp_enqueue_style( 'wp-block-revealer-style', plugin_dir_url( __FILE__ ) . '/css/wp-block-revealer.css', array(),false, 'all' );
+        wp_enqueue_script( 'wp-block-revealer-script' , plugin_dir_url( __FILE__ ) . '/js/wp-block-revealer.js', array('jquery'), WPBLKR_VERSION );
+        wp_enqueue_style( 'wp-block-revealer-style', plugin_dir_url( __FILE__ ) . '/css/wp-block-revealer.css', array(),WPBLKR_VERSION, 'all' );
     }
 }
 

@@ -27,6 +27,11 @@ Hightlight your blocks and stop clicking everywhere to find them.
 
 == Changelog ==
 
+= 0.8.0 =
+* improve blocks support (soon widget and embed)
+* remove unused files
+* version number added to asset url
+
 = 0.7.0 =
 * group support
 * add screenshot 3

@@ -6,8 +6,6 @@ body.wp-block-revealer .editor-styles-wrapper [data-type="core/column"] .wp-bloc
 
 
 body.wp-block-revealer .editor-styles-wrapper [data-type="core/columns"].is-selected,
-
-body.wp-block-revealer .editor-styles-wrapper [data-type="core/column"].is-selected,
 body.wp-block-revealer .editor-styles-wrapper [data-type="core/column"].is-selected .wp-block-column,
 
 body.wp-block-revealer .editor-styles-wrapper [data-type="core/paragraph"].is-selected,
@@ -58,7 +56,6 @@ body.wp-block-revealer .editor-styles-wrapper .is-hovered *[data-type="core/colu
 body.wp-block-revealer .editor-styles-wrapper [data-type="core/columns"].is-hovered,
 
 body.wp-block-revealer .editor-styles-wrapper .is-hovered *[data-type="core/column"],
-body.wp-block-revealer .editor-styles-wrapper [data-type="core/column"].is-hovered,
 body.wp-block-revealer .editor-styles-wrapper [data-type="core/column"].is-hovered .wp-block-column,
 
 body.wp-block-revealer .editor-styles-wrapper .is-hovered *[data-type="core/paragraph"],

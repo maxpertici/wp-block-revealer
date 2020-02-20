@@ -129,6 +129,8 @@ body.wp-block-revealer .editor-styles-wrapper [data-type="core/quote"].is-hovere
 
 {
     background-color: #bdbdbd;
+    /* background-color: #1989c1; */
+    
 }
 
 
@@ -139,7 +141,7 @@ body.wp-block-revealer .editor-styles-wrapper  .block-editor-block-list__breadcr
 body.wp-block-revealer .editor-styles-wrapper  .block-editor-block-list__breadcrumb *{
     background-color: #222 !important;
     color: #fff !important;
-
+    font-size : 22px;
 }
 
 

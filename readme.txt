@@ -27,6 +27,12 @@ Hightlight your blocks and stop clicking everywhere to find them.
 
 == Changelog ==
 
+= 0.9.0 =
+* Larger breadcrumb font-size
+* Clean UI
+* Reveal inster point
+* Fix column hover and selected states
+
 = 0.8.0 =
 * improve blocks support (soon widget and embed)
 * remove unused files

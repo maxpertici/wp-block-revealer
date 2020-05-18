@@ -177,11 +177,12 @@ body.wp-block-revealer .editor-styles-wrapper .block-editor-block-list__layout .
 
 
 
-
+/*
 body.wp-block-revealer .editor-styles-wrapper  .block-editor-block-list__layout .block-editor-block-list__block {
     padding-left: 43px;
     padding-right: 43px;
 }
+*/
 
 /*
 body.wp-block-revealer .editor-styles-wrapper .block-editor-block-list__block[data-type="core/group"]::before{

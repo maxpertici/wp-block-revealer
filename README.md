@@ -24,6 +24,9 @@ Result with group block
 
 ## Changelog
 
+### 0.10
+* WP 5.5.x compatiblity
+
 ### 0.9.0
 * Larger breadcrumb font-size
 * Clean UI

@@ -24,6 +24,10 @@ Result with group block
 
 ## Changelog
 
+### 0.11
+* WP 5.5.x compatiblity
+* Add inserter point
+
 ### 0.10
 * WP 5.5.x compatiblity
 

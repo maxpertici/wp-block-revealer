@@ -4,7 +4,7 @@ Donate link:
 Tags: Gutenberg, Blocks, UI,
 Requires at least: 5.2
 Tested up to: 5.5
-Stable tag: 0.10
+Stable tag: 0.11
 Requires PHP: 7.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -26,6 +26,10 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R).
 
 
 == Changelog ==
+
+= 0.11 =
+* WP 5.5.x compatiblity
+* Add inserter point
 
 = 0.10 =
 * WP 5.5.x compatiblity

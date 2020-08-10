@@ -14,6 +14,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Hightlight your blocks and stop clicking everywhere to find them.
 Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R).
 
+[vimeo https://vimeo.com/446507816]
+
 == Installation ==
 1. Install the plugin and activate.
 2. Use shortcut : Ctrl + Alt + R

@@ -12,7 +12,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 Hightlight your blocks and stop clicking everywhere to find them.
-
+Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R).
 
 == Installation ==
 1. Install the plugin and activate.

@@ -5,7 +5,7 @@ License URI : http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
 Hightlight your blocks and stop clicking everywhere to find them.
-
+Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R).
 
 ## Installation
 1. Install the plugin and activate.
@@ -23,6 +23,10 @@ Result with group block
 ![Result with columns block](/.wordpress.org/screenshot-3.png?raw=true "Result with group blocks")
 
 ## Changelog
+
+### 0.11
+* WP 5.5.x compatiblity
+* Add inserter point
 
 ### 0.10
 * WP 5.5.x compatiblity

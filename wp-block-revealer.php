@@ -3,7 +3,7 @@
 Plugin Name:  WP Block Revealer
 Plugin URI:   https://m.pertici.fr/wp-block-revealer
 Description:  Reveal blocks of Gutenberg Editor with Ctrl + Alt + R keyboard shortcut.
-Version:      0.11
+Version:      1.0
 Author:       Maxime Pertici
 Author URI:   https://m.pertici.fr
 Contributors:
@@ -16,7 +16,10 @@ Copyright 219-2020 WP Block Revealer
 
 defined( 'ABSPATH' ) or	die();
 
-define("WPBLKR_VERSION", "0.10");
+// Plugin version
+if( ! function_exists('get_plugin_data') ){ require_once( ABSPATH . 'wp-admin/includes/plugin.php' ); }
+$wpblckr_plugin_data = get_plugin_data( plugin_dir_path( __FILE__ ) . 'wp-block-revealer.php', false, false ) ;
+define( 'WPBLKR_VERSION' , $wpblckr_plugin_data['Version'] );
 
 /**
  * Tell WP what to do when plugin is activated.
@@ -94,7 +97,7 @@ function wp_blckr_admin_scripts( $hook ) {
     
     if( wp_blckr_gutenberg_is_active() ){
         wp_enqueue_script( 'wp-block-revealer-script' , plugin_dir_url( __FILE__ ) . '/js/wp-block-revealer.js', array('jquery'), WPBLKR_VERSION );
-        wp_enqueue_style( 'wp-block-revealer-style', plugin_dir_url( __FILE__ ) . '/css/wp-block-revealer.css', array(),WPBLKR_VERSION, 'all' );
+        wp_enqueue_style(  'wp-block-revealer-style'  , plugin_dir_url( __FILE__ ) . '/css/wp-block-revealer.css', array(), WPBLKR_VERSION, 'all' );
     }
 }
 

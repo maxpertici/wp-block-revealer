@@ -137,9 +137,9 @@ body.wp-block-revealer .editor-styles-wrapper .is-hovered *[data-type="core/quot
 body.wp-block-revealer .editor-styles-wrapper [data-type="core/quote"].is-hovered
 
 {
-    background-color: #bdbdbd;
+    /* background-color: #bdbdbd; */
     /* background-color: #1989c1; */
-    
+    box-shadow: 0 0 0 4px #1989c1;
 }
 
 

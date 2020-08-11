@@ -29,6 +29,11 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R).
 
 == Changelog ==
 
+= 1.0 =
+* Fix style enqueue version number
+* Fix hovered style - no more background color
+* And why not switch to 1.0
+
 = 0.11 =
 * WP 5.5.x compatiblity
 * Add inserter point

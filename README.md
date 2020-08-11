@@ -24,6 +24,9 @@ Result with group block
 
 ## Changelog
 
+### 1.1
+* Fix selected background color
+
 ### 1.0
 * Fix style enqueue version number
 * Fix hovered style - no more background color

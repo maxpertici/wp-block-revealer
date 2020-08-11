@@ -48,7 +48,8 @@ body.wp-block-revealer .editor-styles-wrapper [data-type="core/separator"].is-se
 body.wp-block-revealer .editor-styles-wrapper [data-type="core/group"].is-selected
 
 {
-    background-color: #f0f0f0;
+    /* background-color: #f0f0f0; */
+    box-shadow: 0 0 0 4px #1989c1;
 }
 
 

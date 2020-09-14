@@ -3,7 +3,7 @@
 Plugin Name:  WP Block Revealer
 Plugin URI:   https://m.pertici.fr/wp-block-revealer
 Description:  Reveal blocks of Gutenberg Editor with Ctrl + Alt + R keyboard shortcut.
-Version:      1.1
+Version:      1.2
 Author:       Maxime Pertici
 Author URI:   https://m.pertici.fr
 Contributors:

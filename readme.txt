@@ -29,6 +29,9 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R).
 
 == Changelog ==
 
+= 1.3 =
+* Fix jQuery deprecated code
+
 = 1.2 =
 * Fix column highlight
 * Add shortcut for copy attr class (CTRL + Alt + C)

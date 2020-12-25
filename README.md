@@ -24,6 +24,15 @@ Result with group block
 
 ## Changelog
 
+### 1.3
+* Fix jQuery deprecated code
+
+### 1.2
+* Fix column highlight
+* Add shortcut for copy attr class (CTRL + Alt + C)
+* Remove inserter indicators
+
+
 ### 1.1
 * Fix selected background color
 

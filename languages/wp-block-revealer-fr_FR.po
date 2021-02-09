@@ -1,15 +1,15 @@
-#, fuzzy
 msgid ""
 msgstr ""
-"Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Block Revealer\n"
 "POT-Creation-Date: 2021-02-09 22:45+0100\n"
-"PO-Revision-Date: 2020-01-25 19:49+0100\n"
+"PO-Revision-Date: 2021-02-09 22:45+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
+"Language: fr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
 "X-Generator: Poedit 2.4.2\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: wp-block-revealer.php\n"
@@ -22,7 +22,7 @@ msgstr ""
 
 #: wp-block-revealer.php:104
 msgid "Reveal blocks"
-msgstr ""
+msgstr "Révéler les blocs"
 
 #. Plugin Name of the plugin/theme
 msgid "WP Block Revealer"
@@ -36,6 +36,8 @@ msgstr ""
 msgid ""
 "Reveal blocks of Gutenberg Editor with Ctrl + Alt + R keyboard shortcut."
 msgstr ""
+"Révélez les blocs de l’éditeur Gutenberg avec le raccourci clavier Ctrl + "
+"Alt + R."
 
 #. Author of the plugin/theme
 msgid "Maxime Pertici"

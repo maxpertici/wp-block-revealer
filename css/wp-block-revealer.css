@@ -268,3 +268,111 @@ body.wp-block-revealer .editor-styles-wrapper .wp-block{
     margin-left: 0;
 }
 */
+
+
+
+/**
+
+
+UI
+
+**/
+
+.interface-interface-skeleton__content{
+    margin-top: 48px;
+}
+
+.wp-block-revealer-options{
+    display: block;
+    position: fixed;
+    margin-top: -48px;
+    z-index: 1;
+    width: 100%;
+    height: 48px;
+
+    background-color: #fff;
+    border-bottom: 1px solid #e0e0e0;
+
+    line-height: 48px;
+    padding-left: 84px;
+}
+.wp-block-revealer-options::before{
+    content: '';
+    display: block;
+    width: 48px;
+    height: 48px;
+    position: absolute;
+    left: 5px;
+    background: transparent url(../img/wpbr-icon.png) center center / 80% auto no-repeat;
+}
+
+@media (min-width:782px){
+    
+    .wp-block-revealer-options::after{
+        content: '';
+        display: block;
+        position: absolute;
+        width: 1px;
+        height: 49px;
+        background: #e0e0e0;
+        left: 59px;
+        top: 0;
+    }
+}
+
+@media(max-width:781px){
+
+    .wp-block-revealer-options::before{
+        left: 17px;
+    }
+
+    .wp-block-revealer-options{
+        
+        padding-left: 70px;
+
+        /*
+        text-align: center;
+        height: 41px;
+        line-height: 41px;
+        */
+    }
+    
+    .wp-block-revealer-options__toggle input{
+        width: 20px;
+        height: 20px;
+    }
+    
+    .wp-block-revealer-options__toggle input[type="checkbox"]::before{
+        width: 20px;
+        height: 20px;
+        margin: -1px;
+    }
+}
+
+@media(max-width:599px){
+    .wp-block-revealer-options::before{
+        left: 5px;
+    }
+    .wp-block-revealer-options{
+        padding-left: 56px;
+    }
+}
+
+.wp-block-revealer-options__toggle{
+    display: inline-block;
+    padding: 4px;
+    border-radius: 3px;
+    line-height: 1.2em;
+    background-color: #fff;
+}
+
+.wp-block-revealer-options__toggle.option-active,
+.wp-block-revealer-options__toggle:hover{
+    box-shadow: 0 0 0 1px #007cba;
+}
+
+.wp-block-revealer-options__toggle *{
+    display: inline-block;
+    /* line-height: 48px; */
+    vertical-align: inherit;
+}

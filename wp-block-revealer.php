@@ -102,6 +102,7 @@ function wp_blckr_admin_scripts( $hook ) {
         wp_localize_script( 'wp-block-revealer-script', 'wpbr_words',
             array( 
                 'option_reveal_block_label' => __('Reveal blocks','wp-block-revealer'),
+                'option_copy_classes_label' => __('Copy CSS class','wp-block-revealer'),
             )
         );
 

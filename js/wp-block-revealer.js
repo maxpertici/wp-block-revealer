@@ -45,11 +45,16 @@ jQuery(document).ready(function($){
         // Ctrl + Alt + C
         if( e.ctrlKey && e.altKey && e.which == 67 ){
             
+            // wpbr_cash_css_classes();
+            $('#wpbkr-button-copy-classes').trigger('click');
+
+            /*
             if( $('body').hasClass('wp-block-revealer--reveal') ){
                 var block_classes = document.querySelector(".edit-post-visual-editor .is-hovered").classList ;
                 try { wpbr_copyStringToClipboard( block_classes.value ); }
                 catch (error) { console.error(error); }
             }
+            */
 
             // Next
             // someNodeList.forEach(callback[, thisArg]);
@@ -59,6 +64,37 @@ jQuery(document).ready(function($){
         }
 
     };
+
+    /**
+     * 
+     * 
+     * 
+     * 
+     */
+    function wpbr_cash_css_classes(){
+
+        var _target_classes = $('.edit-post-visual-editor .is-selected').attr('class') ;
+        if( _target_classes == null ){
+            _target_classes = $('.edit-post-visual-editor .is-hovered').attr('class') ; 
+        }
+
+        if( _target_classes != null ){
+            try { wpbr_copyStringToClipboard( _target_classes ); }
+            catch (error) { console.error(error); }
+        }
+    }
+
+
+
+
+
+    /**
+     * 
+     * 
+     * 
+     * 
+     */
+
 
 
     /**
@@ -113,6 +149,14 @@ jQuery(document).ready(function($){
     }
 
 
+    function wpbr_feature_button(){
+
+        $('.wp-block-revealer-options__button input').click(function(e){
+            wpbr_cash_css_classes();
+        });
+    }
+
+
 
     /**
      * 
@@ -120,8 +164,6 @@ jQuery(document).ready(function($){
      * UI
      * 
      */
-
-    // console.log(wpbr_words.option_reveal_block_label);
     
     wpbr_add_settings_panel();
 
@@ -148,6 +190,7 @@ jQuery(document).ready(function($){
                 // Ready — launch
                 $('.interface-interface-skeleton__content').prepend( '<div class="wp-block-revealer-options">'+_wpbkr_html_panel+'</div>' );
                 wpbr_toggle_option();
+                wpbr_feature_button();
                 wpbr_storage_setup();
                 
 

@@ -167,6 +167,18 @@ jQuery(document).ready(function($){
     
     wpbr_add_settings_panel();
 
+    // v02
+    var _wpbkr_html_panel  = '<form class="wp-block-revealer-options__form">';
+
+    _wpbkr_html_panel += '<span class="wp-block-revealer-options__toggle">';
+    _wpbkr_html_panel += '<input type="checkbox" id="wpbkr-toogle-reveal" name="wpbkr-toogle"><label for="wpbkr-toogle-reveal">'+wpbr_words.option_reveal_block_label+'</label>';
+    _wpbkr_html_panel += '</span>';
+
+
+    _wpbkr_html_panel += '</form>';
+
+    /*
+    // v01
     var _wpbkr_html_panel  = '<form class="wp-block-revealer-options__form">';
 
         _wpbkr_html_panel += '<span class="wp-block-revealer-options__toggle">';
@@ -178,6 +190,7 @@ jQuery(document).ready(function($){
         _wpbkr_html_panel += '</span>';
 
         _wpbkr_html_panel += '</form>';
+    */
     
     function wpbr_add_settings_panel(){
 
@@ -188,10 +201,19 @@ jQuery(document).ready(function($){
             if( $('.interface-interface-skeleton__content').length > 0  ){
                 
                 // Ready — launch
+                
+                $('.components-accessible-toolbar').after( '<div class="wp-block-revealer__toolbar">'+_wpbkr_html_panel+'</div>' );
+                wpbr_toggle_option();
+                wpbr_storage_setup();
+
+
+                /*
+                // v01
                 $('.interface-interface-skeleton__content').prepend( '<div class="wp-block-revealer-options">'+_wpbkr_html_panel+'</div>' );
                 wpbr_toggle_option();
                 wpbr_feature_button();
                 wpbr_storage_setup();
+                */
                 
 
             }else{

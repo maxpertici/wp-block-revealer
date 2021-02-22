@@ -26,6 +26,7 @@ Result with group block
 
 ### 1.3
 * Add button in Editor topbar
+* Local storage support
 * Fix jQuery deprecated event
 * WP 5.6.x compatiblity
 * Temporarily disable copy class feature shortcut

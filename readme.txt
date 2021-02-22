@@ -31,6 +31,7 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) (button now ava
 
 = 1.3 =
 * Add button in Editor topbar
+* Local storage support
 * Fix jQuery deprecated event
 * WP 5.6.x compatiblity
 * Temporarily disable copy class feature shortcut

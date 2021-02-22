@@ -37,6 +37,8 @@ jQuery(document).ready(function($){
         // Ctrl + Alt + R
         if( e.ctrlKey && e.altKey && e.which == 82 ){
 
+            console.log('wpbr');
+            
             // $('body').toggleClass('wp-block-revealer');
             $('#wpbkr-toogle-reveal').trigger('click');
         }
@@ -186,7 +188,7 @@ jQuery(document).ready(function($){
                 
                 // Ready — launch
                 
-                $('.components-accessible-toolbar').after( '<div class="wp-block-revealer__toolbar">'+_wpbkr_html_panel+'</div>' );
+                $('.edit-post-header__toolbar').append( '<div class="wp-block-revealer__toolbar">'+_wpbkr_html_panel+'</div>' );
                 wpbr_toggle_option();
                 wpbr_storage_setup();
 

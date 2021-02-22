@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Block Revealer\n"
-"POT-Creation-Date: 2021-02-09 22:45+0100\n"
-"PO-Revision-Date: 2021-02-09 22:45+0100\n"
+"POT-Creation-Date: 2021-02-22 22:00+0100\n"
+"PO-Revision-Date: 2021-02-22 22:00+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -23,6 +23,10 @@ msgstr ""
 #: wp-block-revealer.php:104
 msgid "Reveal blocks"
 msgstr "Révéler les blocs"
+
+#: wp-block-revealer.php:105
+msgid "Copy CSS class"
+msgstr "Copier les cesses CSS"
 
 #. Plugin Name of the plugin/theme
 msgid "WP Block Revealer"

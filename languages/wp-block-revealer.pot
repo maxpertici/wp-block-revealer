@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Block Revealer\n"
-"POT-Creation-Date: 2021-02-09 22:45+0100\n"
+"POT-Creation-Date: 2021-02-22 22:00+0100\n"
 "PO-Revision-Date: 2020-01-25 19:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -22,6 +22,10 @@ msgstr ""
 
 #: wp-block-revealer.php:104
 msgid "Reveal blocks"
+msgstr ""
+
+#: wp-block-revealer.php:105
+msgid "Copy CSS class"
 msgstr ""
 
 #. Plugin Name of the plugin/theme

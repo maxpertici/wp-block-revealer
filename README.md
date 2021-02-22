@@ -24,6 +24,9 @@ Result with group block
 
 ## Changelog
 
+### 1.3.1
+* Fix elementor support
+
 ### 1.3
 * Add button in Editor topbar
 * Local storage support

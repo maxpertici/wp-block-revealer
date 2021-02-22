@@ -173,24 +173,8 @@ jQuery(document).ready(function($){
     _wpbkr_html_panel += '<span class="wp-block-revealer-options__toggle">';
     _wpbkr_html_panel += '<input type="checkbox" id="wpbkr-toogle-reveal" name="wpbkr-toogle"><label for="wpbkr-toogle-reveal">'+wpbr_words.option_reveal_block_label+'</label>';
     _wpbkr_html_panel += '</span>';
-
-
     _wpbkr_html_panel += '</form>';
 
-    /*
-    // v01
-    var _wpbkr_html_panel  = '<form class="wp-block-revealer-options__form">';
-
-        _wpbkr_html_panel += '<span class="wp-block-revealer-options__toggle">';
-        _wpbkr_html_panel += '<input type="checkbox" id="wpbkr-toogle-reveal" name="wpbkr-toogle"><label for="wpbkr-toogle-reveal">'+wpbr_words.option_reveal_block_label+'</label>';
-        _wpbkr_html_panel += '</span>';
-
-        _wpbkr_html_panel += '<span class="wp-block-revealer-options__button">';
-        _wpbkr_html_panel += '<input type="button" id="wpbkr-button-copy-classes" name="wpbkr-button-copy-classes" value="'+wpbr_words.option_copy_classes_label+'">';
-        _wpbkr_html_panel += '</span>';
-
-        _wpbkr_html_panel += '</form>';
-    */
     
     function wpbr_add_settings_panel(){
 

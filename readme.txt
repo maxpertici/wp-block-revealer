@@ -3,8 +3,8 @@ Contributors: maxpertici
 Donate link: 
 Tags: Gutenberg, Blocks, UI,
 Requires at least: 5.5
-Tested up to: 5.5
-Stable tag: 1.2
+Tested up to: 5.6
+Stable tag: 1.3
 Requires PHP: 7.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -12,13 +12,13 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 == Description ==
 Hightlight your blocks and stop clicking everywhere to find them.
-Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R).
+Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) (button now avaible).
 
 [vimeo https://vimeo.com/446507816]
 
 == Installation ==
 1. Install the plugin and activate.
-2. Use shortcut : Ctrl + Alt + R
+2. Use shortcut : Ctrl + Alt + R or click on the dedicated button
 
 
 == Screenshots ==
@@ -28,6 +28,13 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R).
 
 
 == Changelog ==
+
+= 1.3 =
+* Add button in Editor topbar
+* Fix jQuery deprecated event
+* WP 5.6.x compatiblity
+* Temporarily disable copy class feature shortcut
+
 
 = 1.2 =
 * Fix column highlight

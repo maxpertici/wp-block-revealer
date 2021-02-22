@@ -350,9 +350,11 @@ UI
     padding: 0;
     border-radius: 2px;
     margin: auto;
-    box-shadow: 0 0 0 1px #e0e0e0;
+    /* box-shadow: 0 0 0 1px #e0e0e0; */
+    box-shadow: 0 0 0 1px transparent;
 
-    background: transparent url(../img/wpbr-icon.png) center center / 80% auto no-repeat;
+    background: transparent url(../img/wpbr-icon.svg) center center / 100% auto no-repeat;
+    background-position: center top;
 
 }
 
@@ -372,6 +374,12 @@ input#wpbkr-toogle-reveal{
 .wp-block-revealer-options__toggle.option-active{
     /* background-color: #006ba1; */
     box-shadow: 0 0 0 1px #007cba;
+}
+
+.wp-block-revealer-options__toggle.option-active{
+    /* background-color: #006ba1; */
+    box-shadow: 0 0 0 1px #007cba;
+    background-position: center bottom;
 }
 
 /*

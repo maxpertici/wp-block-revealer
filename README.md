@@ -5,11 +5,11 @@ License URI : http://www.gnu.org/licenses/gpl-2.0.html
 
 ## Description
 Hightlight your blocks and stop clicking everywhere to find them.
-Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R).
+Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) (button now avaible).
 
 ## Installation
 1. Install the plugin and activate.
-2. Use shortcut : Ctrl + Alt + R
+2. Use shortcut : Ctrl + Alt + R or click on the dedicated button
 
 ## Screenshots
 
@@ -24,6 +24,17 @@ Result with group block
 
 ## Changelog
 
+### 1.3
+* Add button in Editor topbar
+* Fix jQuery deprecated event
+* WP 5.6.x compatiblity
+* Temporarily disable copy class feature shortcut
+
+### 1.2
+* Fix column highlight
+* Add shortcut for copy attr class (CTRL + Alt + C)
+* Remove inserter indicators
+
 ### 1.1
 * Fix selected background color
 
@@ -31,7 +42,6 @@ Result with group block
 * Fix style enqueue version number
 * Fix hovered style - no more background color
 * And why not switch to 1.0
-
 
 ### 0.11
 * WP 5.5.x compatiblity

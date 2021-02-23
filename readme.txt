@@ -21,12 +21,6 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) (button now ava
 2. Use shortcut : Ctrl + Alt + R or click on the dedicated button
 
 
-== Screenshots ==
-1. Result with simple blocks
-2. Result with columns
-2. Result with group
-
-
 == Changelog ==
 
 = 1.3.1 =

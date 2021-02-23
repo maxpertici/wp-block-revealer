@@ -11,17 +11,6 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) (button now ava
 1. Install the plugin and activate.
 2. Use shortcut : Ctrl + Alt + R or click on the dedicated button
 
-## Screenshots
-
-Result with simple blocks
-![Result with simple blocks](/.wordpress.org/screenshot-1.png?raw=true "Result with simple blocks")
-
-Result with columns block
-![Result with columns block](/.wordpress.org/screenshot-2.png?raw=true "Result with columns blocks")
-
-Result with group block
-![Result with columns block](/.wordpress.org/screenshot-3.png?raw=true "Result with group blocks")
-
 ## Changelog
 
 ### 1.3.1

@@ -132,7 +132,7 @@ jQuery(document).on('ready',function(){
     
     function wpbr_toggle_option(){
 
-        jQueryn('.wp-block-revealer-options__toggle input').click(function(e){
+        jQuery('.wp-block-revealer-options__toggle input').click(function(e){
             
             var _wpbr_storage = window.localStorage ;
             

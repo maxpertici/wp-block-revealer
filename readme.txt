@@ -3,7 +3,7 @@ Contributors: maxpertici
 Donate link: 
 Tags: Gutenberg, Blocks, UI,
 Requires at least: 5.5
-Tested up to: 5.6
+Tested up to: 5.7
 Stable tag: 1.3.1
 Requires PHP: 7.0
 License: GPLv2
@@ -22,6 +22,10 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) or with the but
 
 
 == Changelog ==
+
+= 1.3.2 =
+• 5.7 support
+* jQuery fix
 
 = 1.3.1 =
 * Fix elementor support

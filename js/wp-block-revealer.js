@@ -31,7 +31,7 @@ jQuery(document).on('ready',function(){
         // 18 : Alt
         // 66 : B
         // 67 : C
-        // 82 : R
+        // 82 : Ruto
         
         // Enable / disable
         // Ctrl + Alt + R
@@ -132,7 +132,7 @@ jQuery(document).on('ready',function(){
     
     function wpbr_toggle_option(){
 
-        $('.wp-block-revealer-options__toggle input').click(function(e){
+        jQueryn('.wp-block-revealer-options__toggle input').click(function(e){
             
             var _wpbr_storage = window.localStorage ;
             
@@ -184,11 +184,11 @@ jQuery(document).on('ready',function(){
 
         setTimeout(function(){
 
-            if( $('.interface-interface-skeleton__content').length > 0  ){
+            if( jQuery('.interface-interface-skeleton__content').length > 0  ){
                 
                 // Ready — launch
                 
-                jQuery('.edit-post-header__toolbar').append( '<div class="wp-block-revealer__toolbar">'+_wpbkr_html_panel+'</div>' );
+                jQuery('.edit-post-header-toolbar__left').after( '<div class="wp-block-revealer__toolbar">'+_wpbkr_html_panel+'</div>' );
                 wpbr_toggle_option();
                 wpbr_storage_setup();
 

@@ -1,4 +1,4 @@
-jQuery(document).ready(function($){
+jQuery(document).on('ready',function(){
 
 
     /**
@@ -13,7 +13,7 @@ jQuery(document).ready(function($){
         var _launch_ls_wpbr_options__reveal = _wpbr_storage.getItem('wpbr_options__reveal') ;
     
         if( _launch_ls_wpbr_options__reveal === 'true' ){
-            $('#wpbkr-toogle-reveal').trigger('click');
+            jQuery('#wpbkr-toogle-reveal').trigger('click');
         }
     }
 
@@ -40,7 +40,7 @@ jQuery(document).ready(function($){
             console.log('wpbr');
             
             // $('body').toggleClass('wp-block-revealer');
-            $('#wpbkr-toogle-reveal').trigger('click');
+            jQuery('#wpbkr-toogle-reveal').trigger('click');
         }
 
         // Copy classes
@@ -48,7 +48,7 @@ jQuery(document).ready(function($){
         if( e.ctrlKey && e.altKey && e.which == 67 ){
             
             // wpbr_cash_css_classes();
-            $('#wpbkr-button-copy-classes').trigger('click');
+            jQuery('#wpbkr-button-copy-classes').trigger('click');
 
             /*
             if( $('body').hasClass('wp-block-revealer--reveal') ){
@@ -75,9 +75,9 @@ jQuery(document).ready(function($){
      */
     function wpbr_cash_css_classes(){
 
-        var _target_classes = $('.edit-post-visual-editor .is-selected').attr('class') ;
+        var _target_classes = jQuery('.edit-post-visual-editor .is-selected').attr('class') ;
         if( _target_classes == null ){
-            _target_classes = $('.edit-post-visual-editor .is-hovered').attr('class') ; 
+            _target_classes = jQuery('.edit-post-visual-editor .is-hovered').attr('class') ; 
         }
 
         if( _target_classes != null ){
@@ -136,14 +136,14 @@ jQuery(document).ready(function($){
             
             var _wpbr_storage = window.localStorage ;
             
-            if( $(this).is( ":checked" ) ){
-                $(this).parent().addClass('option-active');
-                $('body').addClass('wp-block-revealer--reveal');
+            if( jQuery(this).is( ":checked" ) ){
+                jQuery(this).parent().addClass('option-active');
+                jQuery('body').addClass('wp-block-revealer--reveal');
                 _wpbr_storage.setItem( 'wpbr_options__reveal', 'true' );
                 
             }else{
-                $(this).parent().removeClass('option-active');
-                $('body').removeClass('wp-block-revealer--reveal');
+                jQuery(this).parent().removeClass('option-active');
+                jQuery('body').removeClass('wp-block-revealer--reveal');
                 _wpbr_storage.setItem( 'wpbr_options__reveal', 'false' );
             }
             
@@ -153,7 +153,7 @@ jQuery(document).ready(function($){
 
     function wpbr_feature_button(){
 
-        $('.wp-block-revealer-options__button input').click(function(e){
+        jQuery('.wp-block-revealer-options__button input').click(function(e){
             wpbr_cash_css_classes();
         });
     }
@@ -188,14 +188,14 @@ jQuery(document).ready(function($){
                 
                 // Ready — launch
                 
-                $('.edit-post-header__toolbar').append( '<div class="wp-block-revealer__toolbar">'+_wpbkr_html_panel+'</div>' );
+                jQuery('.edit-post-header__toolbar').append( '<div class="wp-block-revealer__toolbar">'+_wpbkr_html_panel+'</div>' );
                 wpbr_toggle_option();
                 wpbr_storage_setup();
 
 
                 /*
                 // v01
-                $('.interface-interface-skeleton__content').prepend( '<div class="wp-block-revealer-options">'+_wpbkr_html_panel+'</div>' );
+                jQuery('.interface-interface-skeleton__content').prepend( '<div class="wp-block-revealer-options">'+_wpbkr_html_panel+'</div>' );
                 wpbr_toggle_option();
                 wpbr_feature_button();
                 wpbr_storage_setup();

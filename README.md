@@ -13,11 +13,14 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) or with the but
 
 ## Changelog
 
+### 1.3.4
+* Fix button position in top bar
+
 ### 1.3.3
 * Fix button insertion
 
 ### 1.3.2
-• 5.7 support
+* 5.7 support
 * jQuery fix
 
 ### 1.3.1

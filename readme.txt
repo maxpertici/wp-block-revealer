@@ -4,7 +4,7 @@ Donate link:
 Tags: Gutenberg, Blocks, UI,
 Requires at least: 5.5
 Tested up to: 5.7
-Stable tag: 1.3.3
+Stable tag: 1.3.4
 Requires PHP: 7.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -23,11 +23,14 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) or with the but
 
 == Changelog ==
 
+= 1.3.4 =
+* Fix button position in top bar
+
 = 1.3.3 =
 * Fix button insertion
 
 = 1.3.2 =
-• 5.7 support
+* 5.7 support
 * jQuery fix
 
 = 1.3.1 =

@@ -187,7 +187,7 @@ jQuery(document).on('ready',function(){
             if( jQuery('.edit-post-header-toolbar').length > 0   ){
                 
                 // Ready — launch
-                
+                jQuery('body').addClass('wp-block-revealer');
                 jQuery('.edit-post-header-toolbar').after( '<div class="wp-block-revealer__toolbar">'+_wpbkr_html_panel+'</div>' );
                 wpbr_toggle_option();
                 wpbr_storage_setup();

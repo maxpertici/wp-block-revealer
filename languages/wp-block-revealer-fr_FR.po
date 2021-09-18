@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Block Revealer\n"
-"POT-Creation-Date: 2021-02-22 22:00+0100\n"
-"PO-Revision-Date: 2021-02-22 22:00+0100\n"
+"POT-Creation-Date: 2021-09-18 18:54+0200\n"
+"PO-Revision-Date: 2021-09-18 18:56+0200\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: fr\n"
@@ -30,23 +30,23 @@ msgstr "Copier les cesses CSS"
 
 #. Plugin Name of the plugin/theme
 msgid "WP Block Revealer"
-msgstr ""
+msgstr "WP Block Revealer"
 
 #. Plugin URI of the plugin/theme
-msgid "https://m.pertici.fr/wp-block-revealer"
-msgstr ""
+msgid "https://m.pertici.fr/en/wp-block-revealer/"
+msgstr "https://m.pertici.fr//wp-block-revealer/"
 
 #. Description of the plugin/theme
 msgid ""
-"Reveal blocks of Gutenberg Editor with Ctrl + Alt + R keyboard shortcut."
+"Reveal blocks of Gutenberg Editor (shortcut avaible with Ctrl + Alt + R)."
 msgstr ""
-"Révélez les blocs de l’éditeur Gutenberg avec le raccourci clavier Ctrl + "
-"Alt + R."
+"Révélez les blocs de l’éditeur Gutenberg (raccourci disponible avec Ctrl + "
+"Alt + R)."
 
 #. Author of the plugin/theme
 msgid "Maxime Pertici"
-msgstr ""
+msgstr "Maxime Pertici"
 
 #. Author URI of the plugin/theme
-msgid "https://m.pertici.fr"
-msgstr ""
+msgid "https://maxpertici.fr"
+msgstr "https://maxpertici.fr"

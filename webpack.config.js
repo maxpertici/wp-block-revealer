@@ -4,7 +4,6 @@ const externals = {
     'react-dom': 'ReactDOM',
 };
 
-
 const isProduction = process.env.NODE_ENV === 'production';
 const mode = isProduction ? 'production' : 'development';
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
@@ -14,12 +13,12 @@ module.exports = {
     
     mode,
 
-    entry : ['./src/js/wp-block-revealer.js', './src/scss/wp-block-revealer.scss'] ,
+    entry : ['./assets-src/js/wp-block-revealer.js', './assets-src/scss/wp-block-revealer.scss'] ,
     
     output: {
         // path: __dirname,
         filename: './wp-block-revealer.build.js',
-        path: path.resolve(__dirname, 'public'),
+        path: path.resolve(__dirname, 'assets'),
     },
 
     externals,

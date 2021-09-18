@@ -3,7 +3,7 @@ msgid ""
 msgstr ""
 "Plural-Forms: nplurals=INTEGER; plural=EXPRESSION;\n"
 "Project-Id-Version: WP Block Revealer\n"
-"POT-Creation-Date: 2021-02-22 22:00+0100\n"
+"POT-Creation-Date: 2021-09-18 18:54+0200\n"
 "PO-Revision-Date: 2020-01-25 19:49+0100\n"
 "Last-Translator: \n"
 "Language-Team: \n"
@@ -33,12 +33,12 @@ msgid "WP Block Revealer"
 msgstr ""
 
 #. Plugin URI of the plugin/theme
-msgid "https://m.pertici.fr/wp-block-revealer"
+msgid "https://m.pertici.fr/en/wp-block-revealer/"
 msgstr ""
 
 #. Description of the plugin/theme
 msgid ""
-"Reveal blocks of Gutenberg Editor with Ctrl + Alt + R keyboard shortcut."
+"Reveal blocks of Gutenberg Editor (shortcut avaible with Ctrl + Alt + R)."
 msgstr ""
 
 #. Author of the plugin/theme
@@ -46,5 +46,5 @@ msgid "Maxime Pertici"
 msgstr ""
 
 #. Author URI of the plugin/theme
-msgid "https://m.pertici.fr"
+msgid "https://maxpertici.fr"
 msgstr ""

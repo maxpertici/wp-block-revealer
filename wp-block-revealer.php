@@ -3,7 +3,7 @@
 Plugin Name:  WP Block Revealer
 Plugin URI:   https://m.pertici.fr/en/wp-block-revealer/
 Description:  Reveal blocks of Gutenberg Editor (shortcut avaible with Ctrl + Alt + R).
-Version:      1.3.5
+Version:      1.4
 Author:       Maxime Pertici
 Author URI:   https://maxpertici.fr
 Contributors:
@@ -11,7 +11,7 @@ License:      GPLv2
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  wp-block-revealer
 Domain Path:  /languages/
-Copyright 219-2020 WP Block Revealer
+Copyright 219-2021 WP Block Revealer
 */
 
 defined( 'ABSPATH' ) or	die();
@@ -50,6 +50,7 @@ function wp_blckr_load(){
 
     require_once( 'inc/block-editor.php' );
     
+    
     /**
      * Fires when plugin is loaded
      * @since 0.1.0
@@ -75,6 +76,7 @@ function wp_blckr_setup() {
     // $load_plugin_textdomain = load_plugin_textdomain( 'wp-block-revealer', false, dirname( plugin_basename( __FILE__ ) ) . '/languages/' );
 	$load_textdomain = load_textdomain( 'wp-block-revealer', WP_LANG_DIR . '/plugins/wp-block-revealer-' . $locale . '.mo' );
 
+
     /**
      * Fires when plugin is loaded
      * @since 0.1.0
@@ -85,22 +87,28 @@ function wp_blckr_setup() {
 add_action( 'after_setup_theme', 'wp_blckr_setup' );
 
 
+
+
 /**
  * Enqueues scripts & styles
+ * @since 0.1.0
  */
 function wp_blckr_admin_scripts( $hook ) {
     
-    if( wp_blckr_gutenberg_is_active() ){
+    $screen = get_current_screen();
+    
+    if( is_admin() && ( $screen->base == 'post' ) && wp_blckr_gutenberg_is_active() ){
+
         
-        wp_enqueue_script( 'wp-block-revealer' , plugin_dir_url( __FILE__ ) . '/assets/wp-block-revealer.build.js', array('jquery'), WPBLKR_VERSION );
+        wp_enqueue_script( 'wp-block-revealer' , plugin_dir_url( __FILE__ ) . '/dist/wp-block-revealer.build.js', array('jquery'), WPBLKR_VERSION );
         wp_localize_script( 'wp-block-revealer', 'wpbr_words',
             array( 
-                'option_reveal_block_label' => __('Reveal blocks','wp-block-revealer'),
+                'options__reveal_block_label' => __('Reveal blocks','wp-block-revealer'),
                 'option_copy_classes_label' => __('Copy CSS class','wp-block-revealer'),
             )
         );
         
-        wp_enqueue_style(  'wp-block-revealer'  , plugin_dir_url( __FILE__ ) . '/assets/wp-block-revealer.css', array(), WPBLKR_VERSION, 'all' );
+        wp_enqueue_style(  'wp-block-revealer'  , plugin_dir_url( __FILE__ ) . '/dist/wp-block-revealer.css', array(), WPBLKR_VERSION, 'all' );
     }
 }
 

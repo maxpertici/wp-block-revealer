@@ -1,0 +1,19 @@
+:root{
+    
+    --wpbr--color--blue       : #1989c1  ;
+    --wpbr--color--blue-hover : #0173ac  ;
+
+    --wpbr--color--white       : #b1b1b1  ;
+    --wpbr--color--white-hover : #d1d1d1  ;
+
+    --wpbr--color--black       : #444343  ;
+    --wpbr--color--black-hover : #111111  ;
+    
+    --wpbr--color--default       : var( --wpbr--color--blue );
+    --wpbr--color--default-hover : var( --wpbr--color--blue-hover );
+    
+    --wpbr--editor--shadow--color : var( --wpbr--color--default ) ;
+    --wpbr--editor--shadow--color-hover : var( --wpbr--color--default-hover ) ;
+    
+
+}

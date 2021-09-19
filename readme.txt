@@ -2,9 +2,9 @@
 Contributors: maxpertici
 Donate link: 
 Tags: Gutenberg, Blocks, UI,
-Requires at least: 5.5
-Tested up to: 5.7
-Stable tag: 1.3.4
+Requires at least: 5.8
+Tested up to: 5.8
+Stable tag: 1.4
 Requires PHP: 7.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,6 +13,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 == Description ==
 Hightlight your blocks and stop clicking everywhere to find them.
 Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) or with the button in the top bar.
+You can change the outline color with a richt click on the button too.
 
 [vimeo https://vimeo.com/515715026]
 
@@ -22,6 +23,12 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) or with the but
 
 
 == Changelog ==
+
+= 1.4 =
+* Add color swatch on right click (3 colors available)
+* Add color indicator on button
+* Fix enqueues (script & style are now only loaded on block editor screen)
+* Rewrite js
 
 = 1.3.4 =
 * Fix button position in top bar
@@ -35,7 +42,6 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) or with the but
 
 = 1.3.1 =
 * Fix elementor support
-
 
 = 1.3 =
 * Add button in Editor topbar

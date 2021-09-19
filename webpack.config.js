@@ -13,12 +13,12 @@ module.exports = {
     
     mode,
 
-    entry : ['./assets-src/js/wp-block-revealer.js', './assets-src/scss/wp-block-revealer.scss'] ,
+    entry : ['./src/js/wp-block-revealer.js', './src/scss/wp-block-revealer.scss'] ,
     
     output: {
         // path: __dirname,
         filename: './wp-block-revealer.build.js',
-        path: path.resolve(__dirname, 'assets'),
+        path: path.resolve(__dirname, 'dist'),
     },
 
     externals,

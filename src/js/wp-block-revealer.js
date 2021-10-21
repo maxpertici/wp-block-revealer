@@ -1,5 +1,10 @@
 jQuery(document).on( 'ready', function(){
 
+
+    // Check if gutenberg exist
+    if( typeof wp.data == 'undefined' ){ return ; }
+
+
     /** 
      * Get storage and check options on launch
      */
@@ -27,12 +32,15 @@ jQuery(document).on( 'ready', function(){
      * Enable / disable
      * @source : https://medium.com/@melwinalm/crcreating-keyboard-shortcuts-in-javascripteating-keyboard-shortcuts-in-javascript-763ca19beb9e
      */
-    document.onkeyup = function(e) {
-        // Ctrl + Alt + R
-        if( e.ctrlKey && e.altKey && e.which == 82 ){
-            jQuery('#wpbkr-toogle-reveal').trigger('click');
-        }
-    };
+    function wpbkr_keyboard__bind(){
+        
+        document.onkeyup = function(e) {
+            // Ctrl + Alt + R
+            if( e.ctrlKey && e.altKey && e.which == 82 ){
+                jQuery('#wpbkr-toogle-reveal').trigger('click');
+            }
+        };
+    }
 
 
     /**
@@ -68,30 +76,12 @@ jQuery(document).on( 'ready', function(){
         });
 
 
-        jQuery('.wp-block-revealer-options__toggle input').on( 'contextmenu', function(e){
-            
-            e.preventDefault();
-
-            // open color swatch
-            if( jQuery(this).parent().hasClass('swatch-open') ){
-                jQuery(this).parent().removeClass('swatch-open') ;
-            }else{
-                jQuery(this).parent().addClass('swatch-open') ;
-            }
-
-            return false;
-        });
-
         jQuery('.wp-block-revealer-options__toggle').on( 'click', '.wp-block-revealer-options__color', function(e){
             
             e.preventDefault();
             wpkr_set__color( jQuery(this).data('color') );
             var wpbr_storage = window.localStorage ;
             wpbr_storage.setItem( 'wpbr_options__color', jQuery(this).data('color') );
-
-            // focus out
-            jQuery('wp-block-revealer-options__toggle, wp-block-revealer-options__toggle *').focusout();
-            jQuery('.wp-block-revealer-options__toggle.swatch-open').removeClass('swatch-open');
 
             return false;
 
@@ -109,7 +99,7 @@ jQuery(document).on( 'ready', function(){
         wpbkr_form__html += '<div class="wp-block-revealer-options__toggle">';
             
             wpbkr_form__html += '<input type="checkbox" id="wpbkr-toogle-reveal" name="wpbkr-toogle">';
-            wpbkr_form__html += '<label for="wpbkr-toogle-reveal">' + wpbr_words.options__reveal_block_label + '</label>';
+            wpbkr_form__html += '<label for="wpbkr-toogle-reveal"><span class="screen-reader-text">' + wpbr_words.options__reveal_block_label + '</span></label>';
 
             wpbkr_form__html += '<div class="wp-block-revealer-options__color-swatch">';
                 wpbkr_form__html += '<button data-color="blue"  class="wp-block-revealer-options__color wp-block-revealer-options__color--blue"></button>';
@@ -150,8 +140,11 @@ jQuery(document).on( 'ready', function(){
                         jQuery('body').addClass('wp-block-revealer');
                         jQuery('.edit-post-header-toolbar').after( '<div class="wp-block-revealer__toolbar">' + wpbkr_form__html + '</div>' );
 
+                        wpbkr_keyboard__bind();
+
                         wpbkr_options__toggle();
                         wpbkr_storage__setup();
+
 
                     }, 80);
                 }

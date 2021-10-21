@@ -36,7 +36,7 @@ body.wp-block-revealer{
 .wp-block-revealer-options__toggle{
     position: relative;
 
-    font-size: 0;
+    /* font-size: 0; */
     height: 32px;
     width: 32px;
     display: inline-block;
@@ -60,6 +60,10 @@ input#wpbkr-toogle-reveal{
     padding: 0;
     display: inline-block;
     vertical-align: middle;
+    /*
+    position: relative;
+    z-index: 2;
+    */
 }
 
 .wp-block-revealer-options__toggle:hover,
@@ -111,20 +115,49 @@ body.wp-block-revealer--reveal .wp-block-revealer-options__button{
 
 .wp-block-revealer-options__color-swatch{
 
+    /*
     display: none;
     .swatch-open & { display: block; }
+    */
+    display: block;
 
     position: absolute;
+    
     width: 100%;
     height: 300%;
 
+    width: 16px;
+    padding-left: 4px;
+    height: 100%;
+
     background-color: white;
-    box-shadow: 0 0 0 1px #ccc;
+    /* box-shadow: 0 0 0 1px #ccc; */
     border-radius: 2px;
 
     left: 0;
     top: 0;
     cursor: default;
+
+    left: 100%;
+    left: calc( 100% + 0px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: transparent;
+
+    /* transition: all 300ms; */
+    
+    cursor: pointer;
+    z-index: -1;
+    transform: translateX( -20px );
+
+    .wp-block-revealer-options__toggle:hover  &,
+    .wp-block-revealer-options__toggle:focus  &,
+    .wp-block-revealer-options__toggle:active &{
+        z-index: 1;
+        transform: translateX( 0 );
+    }
 }
 
 
@@ -132,12 +165,20 @@ body.wp-block-revealer--reveal .wp-block-revealer-options__button{
     width: 24px;
     height: 24px;
     margin: 4px;
+
+    width: 8px;
+    height: 8px;
+    margin: 0;
+
+    
     appearance: none;
     border: none;
     border-radius: 50%;
 
     cursor: pointer;
     transition: all 300ms;
+
+    &:hover{ transform: scale(1.4); }
 
     &--blue {
         background-color : var( --wpbr--color--blue );
@@ -174,8 +215,12 @@ body.wp-block-revealer--reveal .wp-block-revealer-options__button{
 
     position: absolute;
     top: 0;
+    /*
     right: 0;
     transform: translateX(4px) translateY(-4px);
+    */
+    left: 0;
+    transform: translateX(-4px) translateY(-4px);
 
     background-color: var( --wpbr--editor--shadow--color );
 }

@@ -24,6 +24,10 @@ You can change the outline color with a richt click on the button too.
 
 == Changelog ==
 
+= 1.5 =
+* Fix js error if no editor (Thank's to Samy Kantari)
+* Improve color swatch system
+
 = 1.4 =
 * Add color swatch on right click (3 colors available)
 * Add color indicator on button

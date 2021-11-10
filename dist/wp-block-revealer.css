@@ -239,9 +239,10 @@ body.wp-block-revealer--reveal .wp-block-revealer-options__button {
   width: 24px;
   height: 24px;
   margin: 4px;
-  width: 8px;
-  height: 8px;
-  margin: 0;
+  width: 10px;
+  height: 10px;
+  margin: auto;
+  padding: 2px;
   appearance: none;
   border: none;
   border-radius: 50%;

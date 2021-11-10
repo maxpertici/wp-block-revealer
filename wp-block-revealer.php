@@ -47,7 +47,7 @@ register_deactivation_hook( __FILE__, 'wp_blckr_deactivation' );
  */
 
 function wp_blckr_load(){
-
+        
     require_once( 'inc/block-editor.php' );
     
     

@@ -121,36 +121,39 @@ jQuery(document).on( 'ready', function(){
     window.WPBKR.editor_is_ready = false ;
     window.WPBKR.watch = false ;
     
-    const edior_is_ready_subscription = subscribe( () => {
+    if( document.body.classList.contains( 'block-editor-page' ) ){
 
-        let _blocks = wp.data.select('core/block-editor').getBlocks() ;
-        
-        // has blocks, editor seems ready : launch once
-        if( ( _blocks.constructor === Array ) ){
+        const edior_is_ready_subscription = subscribe( () => {
 
-            if( window.WPBKR.watch === false ){
+            let _blocks = wp.data.select('core/block-editor').getBlocks() ;
+            
+            // has blocks, editor seems ready : launch once
+            if( ( _blocks.constructor === Array ) ){
 
-                if( jQuery('.edit-post-header-toolbar').length > 0 ){
+                if( window.WPBKR.watch === false ){
 
-                    window.WPBKR.editor_is_ready = true ;
-                    window.WPBKR.watch = true;
+                    if( jQuery('.edit-post-header-toolbar').length > 0 ){
 
-                    setTimeout(function(){
-                        // Ready — launch
-                        jQuery('body').addClass('wp-block-revealer');
-                        jQuery('.edit-post-header-toolbar').after( '<div class="wp-block-revealer__toolbar">' + wpbkr_form__html + '</div>' );
+                        window.WPBKR.editor_is_ready = true ;
+                        window.WPBKR.watch = true;
 
-                        wpbkr_keyboard__bind();
+                        setTimeout(function(){
+                            // Ready — launch
+                            jQuery('body').addClass('wp-block-revealer');
+                            jQuery('.edit-post-header-toolbar').after( '<div class="wp-block-revealer__toolbar">' + wpbkr_form__html + '</div>' );
 
-                        wpbkr_options__toggle();
-                        wpbkr_storage__setup();
+                            wpbkr_keyboard__bind();
+
+                            wpbkr_options__toggle();
+                            wpbkr_storage__setup();
 
 
-                    }, 80);
+                        }, 80);
+                    }
                 }
             }
-        }
-    });
+        });
+    }
 
 
 });

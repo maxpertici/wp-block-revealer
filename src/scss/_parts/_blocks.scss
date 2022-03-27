@@ -1,100 +1,14 @@
 
 body.wp-block-revealer--reveal .editor-styles-wrapper{
 
-    .wp-block:not([data-type="core/column"]),
-    [data-type="core/column"] .wp-block-column{
-        box-shadow: 0 0 0 2px var( --wpbr--editor--shadow--color ) ;
+    [data-type*="core/"]{
+        box-shadow: 0 0 0 1px var( --wpbr--editor--shadow--color ) ;
     }
 
-    [data-type="core/columns"].is-selected,
-    [data-type="core/column"].is-selected .wp-block-column,
-    [data-type="core/paragraph"].is-selected,
-    [data-type="core/image"].is-selected,
-    [data-type="core/spacer"].is-selected,
-    [data-type="core/gallery"].is-selected,
-    [data-type="core/heading"].is-selected,
-    [data-type="core/list"].is-selected,
-    [data-type="core/audio"].is-selected,
-    [data-type="core/cover"].is-selected,
-    [data-type="core/file"].is-selected,
-    [data-type="core/video"].is-selected,
-    [data-type="core/quote"].is-selected,
-    [data-type="core/code"].is-selected,
-    [data-type="core/freeform"].is-selected,
-    [data-type="core/html"].is-selected,
-    [data-type="core/preformatted"].is-selected,
-    [data-type="core/pullquote"].is-selected,
-    [data-type="core/table"].is-selected,
-    [data-type="core/verse"].is-selected,
-    [data-type="core/media-text"].is-selected,
-    [data-type="core/button"].is-selected,
-    [data-type="core/buttons"].is-selected,
-    [data-type="core/more"].is-selected,
-    [data-type="core/nextpage"].is-selected,
-    [data-type="core/separator"].is-selected,
-    [data-type="core/group"].is-selected
-    {
-        box-shadow: 0 0 0 4px var( --wpbr--editor--shadow--color ) ;
-    }
-
-
-    .is-hovered *[data-type="core/group"],
-    [data-type="core/group"].is-hovered,
-    .is-hovered *[data-type="core/columns"],
-    [data-type="core/columns"].is-hovered,
-    .is-hovered *[data-type="core/column"],
-    [data-type="core/column"].is-hovered,
-    [data-type="core/column"].is-hovered .wp-block-column,
-    .is-hovered *[data-type="core/paragraph"],
-    [data-type="core/paragraph"].is-hovered,
-    .is-hovered *[data-type="core/image"],
-    [data-type="core/image"].is-hovered,
-    .is-hovered *[data-type="core/spacer"],
-    [data-type="core/spacer"].is-hovered,
-    .is-hovered *[data-type="core/gallery"],
-    [data-type="core/gallery"].is-hovered,
-    .is-hovered *[data-type="core/heading"],
-    [data-type="core/heading"].is-hovered,
-    .is-hovered *[data-type="core/list"],
-    [data-type="core/list"].is-hovered,
-    .is-hovered *[data-type="core/audio"],
-    [data-type="core/audio"].is-hovered,
-    .is-hovered *[data-type="core/cover"],
-    [data-type="core/cover"].is-hovered,
-    .is-hovered *[data-type="core/file"],
-    [data-type="core/file"].is-hovered,
-    .is-hovered *[data-type="core/video"],
-    [data-type="core/video"].is-hovered,
-    .is-hovered *[data-type="core/code"],
-    [data-type="core/code"].is-hovered,
-    .is-hovered *[data-type="core/freeform"],
-    [data-type="core/freeform"].is-hovered,
-    .is-hovered *[data-type="core/html"],
-    [data-type="core/html"].is-hovered,
-    .is-hovered *[data-type="core/preformatted"],
-    [data-type="core/preformatted"].is-hovered,
-    .is-hovered *[data-type="core/pullquote"],
-    [data-type="core/pullquote"].is-hovered,
-    .is-hovered *[data-type="core/table"],
-    [data-type="core/table"].is-hovered,
-    .is-hovered *[data-type="core/verse"],
-    [data-type="core/verse"].is-hovered,
-    .is-hovered *[data-type="core/media-text"],
-    [data-type="core/media-text"].is-hovered,
-    .is-hovered *[data-type="core/button"],
-    [data-type="core/button"].is-hovered,
-    .is-hovered *[data-type="core/buttons"],
-    [data-type="core/buttons"].is-hovered,
-    .is-hovered *[data-type="core/more"],
-    [data-type="core/more"].is-hovered,
-    .is-hovered *[data-type="core/nextpage"],
-    [data-type="core/nextpage"].is-hovered,
-    .is-hovered *[data-type="core/separator"],
-    [data-type="core/separator"].is-hovered,
-    .is-hovered *[data-type="core/quote"],
-    [data-type="core/quote"].is-hovered
-    {
-        box-shadow: 0 0 0 4px var( --wpbr--editor--shadow--color ) ;
+    [data-type*="core/"].is-selected,
+    .is-hovered *[data-type*="core/"],
+    [data-type*="core/"].is-hovered{
+        box-shadow: 0 0 0 3px var( --wpbr--editor--shadow--color ) ;
     }
 
 }

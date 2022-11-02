@@ -3,7 +3,7 @@ Contributors: maxpertici
 Donate link: 
 Tags: Gutenberg, Blocks, UI,
 Requires at least: 5.8
-Tested up to: 5.9
+Tested up to: 6.1
 Stable tag: 1.7
 Requires PHP: 7.0
 License: GPLv2

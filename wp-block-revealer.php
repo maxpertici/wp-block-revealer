@@ -1,9 +1,9 @@
 <?php
 /*
-Plugin Name:  WP Block Revealer
-Plugin URI:   https://maxpertici.fr#wp-block-revealer
+Plugin Name:  Block Reveal
+Plugin URI:   https://maxpertici.fr#block-reveal
 Description:  Reveal blocks of Gutenberg Editor (Keyboard shortcut available : Ctrl + Alt + R).
-Version:      1.7
+Version:      1.8
 Author:       @maxpertici
 Author URI:   https://maxpertici.fr
 Contributors:
@@ -11,7 +11,7 @@ License:      GPLv2
 License URI:  https://www.gnu.org/licenses/gpl-2.0.html
 Text Domain:  wp-block-revealer
 Domain Path:  /languages/
-Copyright 219-2021 WP Block Revealer
+Copyright 219-2021 Block Reveal
 */
 
 defined( 'ABSPATH' ) or	die();

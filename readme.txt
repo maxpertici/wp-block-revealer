@@ -1,4 +1,4 @@
-=== Block Reveal ===
+=== Block Revealer ===
 Contributors: maxpertici
 Donate link: 
 Tags: Gutenberg, Blocks, UI,

@@ -24,6 +24,10 @@ You can change the outline color with a richt click on the button too.
 
 == Changelog ==
 
+= 1.9 =
+*
+*
+
 = 1.8 =
 * New plugin name
 * WP 6.1 compatibility

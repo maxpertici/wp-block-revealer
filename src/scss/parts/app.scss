@@ -5,8 +5,13 @@
   top: 74px;
 }
 
+
 /*
 .is-distraction-free .block-revealer-app {
   top: 74px;
 }
 */
+
+body.wp-block-revealer--has-secondary-sidebar .block-revealer-app {
+  left: 374px;
+}

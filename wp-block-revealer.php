@@ -14,13 +14,12 @@ Domain Path:  /languages/
 Copyright 219-2021 Block Revealer
 */
 
-defined( 'ABSPATH' ) or	die();
+defined( 'ABSPATH' ) or die();
 
 // Plugin version
 if( ! function_exists('get_plugin_data') ){ require_once( ABSPATH . 'wp-admin/includes/plugin.php' ); }
 $wpblckr_plugin_data = get_plugin_data( plugin_dir_path( __FILE__ ) . 'wp-block-revealer.php', false, false ) ;
 define( 'WPBLKR_VERSION' , $wpblckr_plugin_data['Version'] );
-
 
 
 /**
@@ -74,3 +73,4 @@ function wp_blckr_block_assets( $hook ) {
 }
 
 add_action( 'enqueue_block_editor_assets', 'wp_blckr_block_assets' );
+// add_action( 'enqueue_block_assets', 'wp_blckr_block_assets' );

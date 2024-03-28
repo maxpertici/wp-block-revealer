@@ -1,61 +1,158 @@
 
-import { useState } from 'react';
+import { __ } from '@wordpress/i18n';
+
+import {useEffect, useState} from 'react';
 
 import LocalStorage from "./LocalStorage.js";
 
+import { GlobalSignalReveal, GlobalSignalColor } from "./GlobalSignal.js";
+
+import { effect } from "@preact/signals-react";
+
+import Editor from "./Editor.js";
+
 export default function Button() {
 
-	const [ active, setActive ] = useState(false );
-
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// storage
 	const storage = new LocalStorage();
+	const editor = new Editor();
 
-	function handleActiveChange(e){
-		// e.preventDefault();
-		setActive( e.target.checked )
-		storage.setReveal( e.target.checked );
+
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// states
+	const [ active, setActive ] = useState(false );
+	const [ color, setColor ] = useState('blue' );
+	const [checked, setChecked] = useState(false);
+
+
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// setter
+	function setButtonReveal( value ) {
+		setActive( value );
+		setChecked( value );
+		storage.setReveal( value );
+		editor.setReveal( value );
+		GlobalSignalReveal.value = value ;
 	}
 
-	const [ color, setColor ] = useState('blue' );
+	function setButtonColor( value ) {
+		setColor( value );
+		storage.setColor(value);
+		editor.setColor(value);
+		GlobalSignalColor.value = value ;
+	}
+
+
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// handles
+	function handleActiveChange(e){
+		// e.preventDefault();
+		setButtonReveal( e.target.checked )
+		// GlobalSignalColor.value = e.target.checked;
+
+	}
 
 	function handleColorChange(e) {
 		e.preventDefault();
-		setColor( e.target.dataset.color )
-		storage.setColor(e.target.dataset.color);
+		setButtonColor( e.target.dataset.color );
+		// GlobalSignalColor.value = e.target.dataset.color;
 	}
 
+
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// Effects
+
+	// on mount
+	useEffect(() => {
+		setButtonReveal( GlobalSignalColor.value );
+		setButtonColor( GlobalSignalColor.value );
+	}, []);
+
+
+	// on state update
+	useEffect(() => {
+		setButtonReveal( active );
+		GlobalSignalReveal.value = active ;
+	}, [ active ]);
+
+	// on state update
+	useEffect(() => {
+		setButtonColor( color );
+		GlobalSignalColor.value = color ;
+	}, [ color ]);
+
+
+	// on signal update
+	effect(() => {
+		if( GlobalSignalColor.value !== color ) {
+			setButtonColor( GlobalSignalColor.value );
+		}
+		if( GlobalSignalReveal.value !== active ) {
+			setButtonReveal( GlobalSignalReveal.value );
+		}
+	});
+
+
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// markup
+	let toggleClass = active ? 'wp-block-revealer-options__toggle option-active' : 'wp-block-revealer-options__toggle';
+
+
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// Return
+
 	return (
+
 		<>
+		<form className="wp-block-revealer-options__form">
 
-			<form className="wp-block-revealer-options__form">
+			<div className={toggleClass}>
 
-				<div className="wp-block-revealer-options__toggle">
+				<input type="checkbox" id="wpbkr-toogle-reveal" name="wpbkr-toogle" defaultChecked={checked} onChange={ handleActiveChange } />
 
-					<input type="checkbox" id="wpbkr-toogle-reveal" name="wpbkr-toogle" onClick={ handleActiveChange } />
+				<label for="wpbkr-toogle-reveal">
+					<span className="screen-reader-text">
+					{ __('Reveal', 'wp-block-revealer') }
+					</span>
+				</label>
 
-					<label for="wpbkr-toogle-reveal">
+				<div className="wp-block-revealer-options__color-swatch">
+
+					<button data-color="blue"
+							onClick={ handleColorChange }
+							className="wp-block-revealer-options__color wp-block-revealer-options__color--blue">
+
 						<span className="screen-reader-text">
-						{/* wpbr_words.options__reveal_block_label */ }
+						{ __('Blue', 'wp-block-revealer') }
 						</span>
-					</label>
+					</button>
 
-					<div className="wp-block-revealer-options__color-swatch">
-						<button data-color="blue"
-								onClick={ handleColorChange }
-								className="wp-block-revealer-options__color wp-block-revealer-options__color--blue"></button>
-						<button data-color="white"
-								onClick={ handleColorChange }
-								className="wp-block-revealer-options__color wp-block-revealer-options__color--white"></button>
-						<button data-color="black"
-								onClick={ handleColorChange }
-								className="wp-block-revealer-options__color wp-block-revealer-options__color--black"></button>
-					</div>
+					<button data-color="white"
+							onClick={ handleColorChange }
+							className="wp-block-revealer-options__color wp-block-revealer-options__color--white">
 
-					<div className="wp-block-revealer-options__indicator"></div>
+						<span className="screen-reader-text">
+						{ __('White', 'wp-block-revealer') }
+						</span>
+					</button>
+
+					<button data-color="black"
+							onClick={ handleColorChange }
+							className="wp-block-revealer-options__color wp-block-revealer-options__color--black">
+
+						<span className="screen-reader-text">
+						{ __('Black', 'wp-block-revealer') }
+						</span>
+					</button>
 
 				</div>
 
-			</form>
+				<div className="wp-block-revealer-options__indicator"></div>
 
+			</div>
+
+		</form>
 		</>
 	)
 }

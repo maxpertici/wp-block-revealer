@@ -10,12 +10,18 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@wordpress/compose": "^6.31.0",
+    "@wordpress/element": "^5.31.0",
+    "@wordpress/hooks": "^3.54.0",
+    "@wordpress/i18n": "^4.54.0",
     "@wordpress/scripts": "^26.15.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
   "dependencies": {
+    "@preact/signals-react": "^2.0.1",
     "@wordpress/dom-ready": "^3.53.0",
+    "preact": "^10.20.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   }

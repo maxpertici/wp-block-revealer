@@ -1,6 +1,10 @@
-.block-revealer-app{
+.block-revealer-app {
   position: absolute;
   z-index: 20;
-  left: 1.5em;
-  top: 1.5em;
+  left: 14px;
+  top: 14px;
+}
+
+.is-distraction-free .block-revealer-app {
+  top: 74px;
 }

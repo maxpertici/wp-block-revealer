@@ -8,16 +8,18 @@ export default class LocalStorage {
 	}
 
 	getReveal(){
-		return window.localStorage.getItem( 'wpbr_options__reveal' );
+		return window.localStorage.getItem( 'wpbr_options__reveal' ) === 'true' ? true : false ;
 	}
 
 	setColor( color ){
-		console.log( 'setColor', color );
+		// console.log( 'setColor', color );
 		window.localStorage.setItem( 'wpbr_options__color', color );
 	}
 
+
 	setReveal( reveal ){
-		console.log( 'setReveal', reveal );
-		window.localStorage.setItem( 'wpbr_options__reveal', reveal );
+
+		let revealValue = reveal === true ? 'true' : 'false' ;
+		window.localStorage.setItem( 'wpbr_options__reveal', revealValue );
 	}
 }

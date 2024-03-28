@@ -1,52 +1,65 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: WP Block Revealer\n"
-"POT-Creation-Date: 2021-09-18 18:54+0200\n"
-"PO-Revision-Date: 2021-09-18 18:56+0200\n"
+"Report-Msgid-Bugs-To: \n"
 "Last-Translator: \n"
-"Language-Team: \n"
-"Language: fr\n"
+"Language-Team: French (France)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-09-18 18:54+0200\n"
+"PO-Revision-Date: 2024-03-28 22:14+0000\n"
+"Language: fr_FR\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-"X-Generator: Poedit 2.4.2\n"
+"X-Generator: Loco https://localise.biz/\n"
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-WPHeader: wp-block-revealer.php\n"
 "X-Poedit-SourceCharset: UTF-8\n"
-"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: wp-block-revealer.php:104
-msgid "Reveal blocks"
-msgstr "Révéler les blocs"
+#. Author of the plugin
+msgid "@maxpertici"
+msgstr "@maxpertici"
+
+#. Plugin Name of the plugin
+msgid "Block Revealer"
+msgstr "Block Revealer"
 
 #: wp-block-revealer.php:105
 msgid "Copy CSS class"
 msgstr "Copier les cesses CSS"
 
-#. Plugin Name of the plugin/theme
-msgid "WP Block Revealer"
-msgstr "WP Block Revealer"
-
 #. Plugin URI of the plugin/theme
 msgid "https://m.pertici.fr/en/wp-block-revealer/"
 msgstr "https://m.pertici.fr//wp-block-revealer/"
 
-#. Description of the plugin/theme
-msgid ""
-"Reveal blocks of Gutenberg Editor (shortcut avaible with Ctrl + Alt + R)."
-msgstr ""
-"Révélez les blocs de l’éditeur Gutenberg (raccourci disponible avec Ctrl + "
-"Alt + R)."
+#. Author URI of the plugin/theme
+#. Author URI of the plugin
+msgid "https://maxpertici.fr"
+msgstr "https://maxpertici.fr"
+
+#. Plugin URI of the plugin
+msgid "https://maxpertici.fr#block-revealer"
+msgstr "https://maxpertici.fr#block-revealer"
 
 #. Author of the plugin/theme
 msgid "Maxime Pertici"
 msgstr "Maxime Pertici"
 
-#. Author URI of the plugin/theme
-msgid "https://maxpertici.fr"
-msgstr "https://maxpertici.fr"
+#: wp-block-revealer.php:104
+msgid "Reveal blocks"
+msgstr "Révéler les blocs"
+
+#. Description of the plugin
+msgid "Reveal blocks of Gutenberg Editor (Keyboard shortcut available : Ctrl + Alt + R)."
+msgstr "Révéler les blocs de l'éditeur Gutenberg (raccourci clavier disponible : Ctrl + Alt + R)."
+
+#. Description of the plugin/theme
+msgid "Reveal blocks of Gutenberg Editor (shortcut avaible with Ctrl + Alt + R)."
+msgstr "Révélez les blocs de l’éditeur Gutenberg (raccourci disponible avec Ctrl + Alt + R)."
+
+#. Plugin Name of the plugin/theme
+msgid "WP Block Revealer"
+msgstr "WP Block Revealer"

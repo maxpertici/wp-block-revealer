@@ -47,9 +47,13 @@ add_action( 'plugins_loaded', 'wp_blckr_load' );
 function wp_blckr_setup() {
 
 	// Translations
-	$locale = get_locale();
+	$user_id = get_current_user_id();
+	$locale = get_user_locale( $user_id );
+
+	load_plugin_textdomain( 'wpdocs_textdomain', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+
 	$locale = apply_filters( 'plugin_locale', $locale, 'wp-block-revealer' );
-	$load_textdomain = load_textdomain( 'wp-block-revealer', WP_LANG_DIR . '/plugins/wp-block-revealer-' . $locale . '.mo' );
+	load_textdomain( 'wp-block-revealer', WP_LANG_DIR . '/plugins/wp-block-revealer-' . $locale . '.mo' );
 
 	// Fires when plugin is loaded
 	do_action( 'wp_blckr_ready' );
@@ -69,7 +73,10 @@ function wp_blckr_block_assets( $hook ) {
 	wp_enqueue_style(  'wp-block-revealer', plugin_dir_url( __FILE__ ) . 'dist/block-revealer.css', array(), WPBLKR_VERSION, 'all' );
 
 	$assets = plugin_dir_path( __FILE__ ) . 'dist/block-revealer.asset.php';
-	wp_enqueue_script( 'wp-block-revealer', plugin_dir_url( __FILE__ ) . 'dist/block-revealer.js', $assets, WPBLKR_VERSION );
+	wp_register_script( 'wp-block-revealer', plugin_dir_url( __FILE__ ) . 'dist/block-revealer.js', $assets, WPBLKR_VERSION );
+	wp_enqueue_script( 'wp-block-revealer' );
+	wp_set_script_translations( 'wp-block-revealer', 'wp-block-revealer', plugin_dir_url( __FILE__ ) . 'languages' );
+
 }
 
 add_action( 'enqueue_block_editor_assets', 'wp_blckr_block_assets' );

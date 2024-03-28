@@ -4,7 +4,7 @@ export default class Colors {
 	constructor() {
 
 		this.colors = {
-			"blue" : "#1989c1",
+			"blue"  : "#1989c1",
 			"white" : "#b1b1b1",
 			"black" : "#444343"
 		}

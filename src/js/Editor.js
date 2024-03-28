@@ -8,6 +8,11 @@ export default class Editor {
 		this.bodyNodes = this.getBodyNodes();
 	}
 
+	/**
+	 * Init
+	 * @param reveal
+	 * @param color
+	 */
 	init( { reveal = false, color= 'blue' } ){
 
 		this.setPluginClass('wp-block-revealer');
@@ -19,6 +24,10 @@ export default class Editor {
 		this.colors = new Colors();
 	}
 
+	/**
+	 * getBodyNodes
+	 * @returns {HTMLElement[]}
+	 */
 	getBodyNodes(){
 
 		let bodyNodes = [] ;
@@ -163,15 +172,13 @@ export default class Editor {
 
 				for( let mutation of mutationsList ){
 
-					/**
-					 * Compare class with storage values
-					 */
-
-					let styles = getComputedStyle(mutation.target);
-					let color = styles.getPropertyValue('--wpbr--editor--shadow--color');
-					let colore_name = this.colors.findColor( color ) ;
 
 					if( mutation.type === 'attributes' && mutation.attributeName === 'class' ){
+
+						// Compare class with storage values
+						let styles = getComputedStyle(mutation.target);
+						let color = styles.getPropertyValue('--wpbr--editor--shadow--color');
+						let colore_name = this.colors.findColor( color ) ;
 
 						// Color
 						if( colore_name !== this.storage.getColor() ){

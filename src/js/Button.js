@@ -100,6 +100,16 @@ export default function Button() {
 
 
 	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+	// translations
+
+	let reveal = BlockRevealerVars.translations.reveal;
+
+	let blue  = BlockRevealerVars.translations.colors.blue;
+	let white = BlockRevealerVars.translations.colors.white;
+	let black = BlockRevealerVars.translations.colors.black;
+
+
+	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
 	// Return
 
 	return (
@@ -113,7 +123,7 @@ export default function Button() {
 
 				<label for="wpbkr-toogle-reveal">
 					<span className="screen-reader-text">
-					{ __('Reveal', 'wp-block-revealer') }
+					{ reveal }
 					</span>
 				</label>
 
@@ -124,7 +134,7 @@ export default function Button() {
 							className="wp-block-revealer-options__color wp-block-revealer-options__color--blue">
 
 						<span className="screen-reader-text">
-						{ __('Blue', 'wp-block-revealer') }
+						{ blue }
 						</span>
 					</button>
 
@@ -133,7 +143,7 @@ export default function Button() {
 							className="wp-block-revealer-options__color wp-block-revealer-options__color--white">
 
 						<span className="screen-reader-text">
-						{ __('White', 'wp-block-revealer') }
+						{ white }
 						</span>
 					</button>
 
@@ -142,7 +152,7 @@ export default function Button() {
 							className="wp-block-revealer-options__color wp-block-revealer-options__color--black">
 
 						<span className="screen-reader-text">
-						{ __('Black', 'wp-block-revealer') }
+						{ black }
 						</span>
 					</button>
 

@@ -20,7 +20,6 @@ export default class Colors {
 		})
 
 		return '' ;
-
 	}
 
 }

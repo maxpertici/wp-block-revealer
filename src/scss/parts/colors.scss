@@ -1,5 +1,5 @@
 :root{
-    
+
     --wpbr--color--blue       : #1989c1  ;
     --wpbr--color--blue-hover : #0173ac  ;
 
@@ -11,6 +11,9 @@
     
     --wpbr--color--default       : var( --wpbr--color--blue );
     --wpbr--color--default-hover : var( --wpbr--color--blue-hover );
+
+    --wpbr--color--default       : #1989c1 ;
+    --wpbr--color--default-hover : #0173ac ;
     
     --wpbr--editor--shadow--color : var( --wpbr--color--default ) ;
     --wpbr--editor--shadow--color-hover : var( --wpbr--color--default-hover ) ;

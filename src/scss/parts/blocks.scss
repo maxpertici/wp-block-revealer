@@ -1,13 +1,23 @@
 
 body.wp-block-revealer--reveal .is-root-container {
 
-    .wp-block{
+
+    .wp-block,
+    *[class~="wp-block"]{
         box-shadow: 0 0 0 1px var( --wpbr--editor--shadow--color ) ;
     }
 
     .wp-block.is-selected,
     .is-hovered *.wp-block,
-    .wp-block.is-hovered{
+    .wp-block.is-hovered,
+    *[class~="wp-block"].is-selected,
+    .is-hovered *[class~="wp-block"],
+    *[class~="wp-block"].is-hovered{
         box-shadow: 0 0 0 3px var( --wpbr--editor--shadow--color ) ;
     }
+}
+
+.components-editor-notices__dismissible,
+.components-editor-notices__pinned{
+    z-index: 21;
 }

@@ -2,7 +2,7 @@
 
 import './scss/block-revealer.scss' ;
 
-import { waitingElement } from './js/Utils.js' ;
+import { waitingDependencies, waitingElement } from './js/Utils.js' ;
 
 
 /**
@@ -22,6 +22,7 @@ async function BlockRevealBootstrap(){
 
 	// Waiting Editor Markup
 	await waitingElement('.popover-slot') ;
+	await waitingDependencies(['React', 'ReactDOM']) ;
 
 	const isSiteEditor = document.querySelector('.edit-site-layout') ;
 	if( isSiteEditor ) { return ; }
@@ -39,8 +40,13 @@ async function BlockRevealBootstrap(){
 	const React= window.React ;
 	const { createRoot } =  window.ReactDOM ;
 
-	const root = createRoot(AppRoot);
-	root.render( React.createElement( App ) );
+	// createRoot for React 18+
+	if( 18 <= parseInt(React.version.split('.')[0]) ){
+		const root = createRoot(AppRoot);
+		root.render( React.createElement( App ) );
+	}else{
+		ReactDOM.render(React.createElement( App ), AppRoot);
+	}
 
 	// Editor Styles
 	const Editor = (await import('./js/Editor.js')).default ;

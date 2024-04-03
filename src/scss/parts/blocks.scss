@@ -1,14 +1,13 @@
 
 body.wp-block-revealer--reveal .is-root-container {
 
-    [data-type*="core/"]{
+    .wp-block{
         box-shadow: 0 0 0 1px var( --wpbr--editor--shadow--color ) ;
     }
 
-    [data-type*="core/"].is-selected,
-    .is-hovered *[data-type*="core/"],
-    [data-type*="core/"].is-hovered{
+    .wp-block.is-selected,
+    .is-hovered *.wp-block,
+    .wp-block.is-hovered{
         box-shadow: 0 0 0 3px var( --wpbr--editor--shadow--color ) ;
     }
-
 }

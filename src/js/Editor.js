@@ -19,7 +19,6 @@ export default class Editor {
 		this.setColor( color );
 		this.setReveal( reveal );
 		this.bodyNodeObserver();
-		this.interfaceObserver();
 		this.storage = new LocalStorage();
 		this.colors = new Colors();
 	}
@@ -61,19 +60,33 @@ export default class Editor {
 	}
 
 	/**
+	 * isSiteEditor
+	 * @returns {boolean}
+	 */
+	isSiteEditor(){
+		return document.querySelector('.edit-site-visual-editor') ? true : false ;
+	}
+
+
+	/**
 	 * domBody
 	 * @returns {null|HTMLElement}
 	 */
 	domBody(){
 
 		let body= null ;
-		let node = this.isPostEditorIframe() ? document.querySelector('iframe[name="editor-canvas"]')  :  document.querySelector('.block-editor-writing-flow') ;
+		let node = this.isPostEditorIframe() ? document.querySelector('iframe[name="editor-canvas"]') : document.querySelector('.block-editor-writing-flow') ;
 
 		if( node && this.isPostEditorIframe() ){
 			body = node.contentWindow.document.body ;
 		}
 
-		if( node && ! this.isPostEditorIframe() ){
+		if( this.isSiteEditor() ){
+			node = document.querySelector('iframe[name="editor-canvas"]') ;
+			body = node.contentWindow.document.body ;
+		}
+
+		if( node && ! this.isPostEditorIframe() && ! this.isSiteEditor() ){
 			body = document.querySelector('body') ;
 		}
 
@@ -121,6 +134,7 @@ export default class Editor {
 	setReveal( reveal ){
 
 		this.bodyNodes.forEach( (node) => {
+
 			if( reveal ){
 				node.classList.add('wp-block-revealer--reveal');
 			}else{
@@ -130,34 +144,6 @@ export default class Editor {
 
 	}
 
-	// - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-	// Observers
-
-	/**
-	 * interfaceObserver
-	 */
-	interfaceObserver(){
-
-		let interface_skeleton = document.querySelector('.interface-interface-skeleton__body');
-
-		let observer = new MutationObserver( (mutationsList, observer) => {
-
-			for( let mutation of mutationsList ){
-
-				const has_secondary_sidebar = mutation.target.querySelector('.interface-interface-skeleton__secondary-sidebar') ? true : false ;
-
-				if( has_secondary_sidebar ) {
-					this.setPluginClass('wp-block-revealer--has-secondary-sidebar');
-				}else{
-
-					this.removePluginClass('wp-block-revealer--has-secondary-sidebar');
-				}
-			}
-
-		} );
-
-		observer.observe(interface_skeleton, { attributes: false, childList: true, subtree: false });
-	}
 
 	/**
 	 * bodyNodeObserver

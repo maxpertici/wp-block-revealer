@@ -17,23 +17,20 @@ import { waitingDependencies, waitingElement } from './js/Utils.js' ;
  */
 async function BlockRevealBootstrap(){
 
-
-	// console.log('BlockRevealBootstrap');
-
 	// Waiting Editor Markup
-	await waitingElement('.popover-slot') ;
+	await waitingElement('.editor-document-tools__left') ;
 	await waitingDependencies(['React', 'ReactDOM']) ;
 
 	const isSiteEditor = document.querySelector('.edit-site-layout') ;
 	if( isSiteEditor ) { return ; }
 
-	const popover = document.querySelector('.popover-slot') ;
+	const tools = document.querySelector('.editor-document-tools__left') ;
 
 	// Create App Root
 	const appDiv  = document.createElement("div");
 	appDiv.id = 'block-revealer-root'
 
-	const AppRoot = popover.parentNode.insertBefore( appDiv, popover );
+	const AppRoot = tools.parentNode.appendChild( appDiv );
 
 	const App = (await import('./js/App.js')).default ;
 

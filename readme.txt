@@ -26,9 +26,8 @@ You can change the outline color with a richt click on the button too.
 
 = 1.9 =
 * WP 6.5 compatibility
-* Change Button Position
 * Add Iframed Editor Support
-* JS rewrite in order to be (may be) later compatible with Site Editor
+* Start JS rewrite in order to be later compatible with Site Editor
 
 = 1.8 =
 * New plugin name

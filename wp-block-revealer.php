@@ -87,26 +87,6 @@ function wp_blckr_block_assets() {
 		)
 	);
 
-	// @TODO : __() translations with dynamic import ?
-	/*
-	$files = glob( plugin_dir_path( __FILE__ ) . 'dist/*.js' );
-	$filenames = array();
-
-	foreach ( $files as $file ) {
-		$filename = basename( $file );
-		$handle = str_replace( '.js', '', $filename );
-		$filenames[] = $handle;
-	}
-
-	foreach ( $filenames as $handle ) {
-		wp_register_script( $handle, plugin_dir_url( __FILE__ ) . 'dist/block-revealer.js', $assets, WPBLKR_VERSION );
-		wp_set_script_translations( $handle, 'wp-block-revealer', plugin_dir_url( __FILE__ ) . 'languages' );
-	}
-
-	wp_enqueue_script( 'wp-block-revealer', plugin_dir_url( __FILE__ ) . 'dist/block-revealer.js', $assets, WPBLKR_VERSION );
-	*/
-
-
 }
 
 add_action( 'enqueue_block_editor_assets', 'wp_blckr_block_assets' );

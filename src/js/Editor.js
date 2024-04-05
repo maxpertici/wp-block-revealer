@@ -124,6 +124,9 @@ export default class Editor {
 
 	setColor( color ){
 
+		if( ! color ){
+			color = 'blue';
+		}
 
 		this.bodyNodes.forEach( (node) => {
 			node.style.setProperty('--wpbr--editor--shadow--color', 'var( --wpbr--color--'+color+' )' );
@@ -191,5 +194,31 @@ export default class Editor {
 	}
 
 
+	/**
+	 * keepChildAlive
+	 * Keep React Child Alive in the DOM, append it to parentNode
+	 * @param parentSelector
+	 * @param App
+	 */
+	keepChildAlive( parentSelector, App ){
+
+
+		setInterval( () => {
+
+			// console.log('keepChildAlive');
+
+			let child = null ;
+			let parent = document.querySelector( parentSelector ) ;
+
+			if( parent ){
+				child = parent.querySelector('#block-revealer-root') ;
+			}
+
+			if( ! child ){
+				parent.appendChild( App );
+			}
+		}, 1200 );
+
+	}
 
 }

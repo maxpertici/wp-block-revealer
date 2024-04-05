@@ -17,17 +17,15 @@ export default class KeyboardShortcuts {
 		// Ctrl + Alt + R
 		// https://www.delftstack.com/howto/javascript/javascript-keyboard-shortcut/
 
+		[].forEach.call( editor.getBodyNodes(), ( element ) => {
 
-		// body
-		editor.getBody().addEventListener( 'keydown', ( e ) => {
+			element.addEventListener( 'keydown', ( e ) => {
 
-			// console.log( 'shortcut' );
-			// console.log(e);
-
-			if( e.ctrlKey && e.altKey && e.keyCode === 82 ){
-				GlobalSignalReveal.value = !GlobalSignalReveal.value;
-			}
-		} ) ;
+				if( e.ctrlKey && e.altKey && e.keyCode === 82 ){
+					GlobalSignalReveal.value = !GlobalSignalReveal.value;
+				}
+			} )
+		});
 
 		// document
 		if( document.body !== editor.getBody() ){

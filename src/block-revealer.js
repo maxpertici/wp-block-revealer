@@ -24,30 +24,34 @@ async function BlockRevealBootstrap(){
 	const isSiteEditor = document.querySelector('.edit-site-layout') ;
 	if( isSiteEditor ) { return ; }
 
-	const tools = document.querySelector('.editor-document-tools__left') ;
+	// Editor Styles
+	const Editor = (await import('./js/Editor.js')).default ;
+	const canvas = new Editor();
 
 	// Create App Root
 	const appDiv  = document.createElement("div");
 	appDiv.id = 'block-revealer-root'
 
-	const AppRoot = tools.parentNode.appendChild( appDiv );
+	const AppRoot = document.querySelector('.editor-document-tools__left').parentNode.appendChild( appDiv );
 
 	const App = (await import('./js/App.js')).default ;
-
 	const React= window.React ;
-	const { createRoot } =  window.ReactDOM ;
+
+	let RootApp = null ;
 
 	// createRoot for React 18+
 	if( 18 <= parseInt(React.version.split('.')[0]) ){
+		const { createRoot } =  window.ReactDOM ;
 		const root = createRoot(AppRoot);
 		root.render( React.createElement( App ) );
+		RootApp = document.querySelector('#block-revealer-root') ;
 	}else{
 		ReactDOM.render(React.createElement( App ), AppRoot);
+		RootApp = document.querySelector('#block-revealer-root') ;
 	}
 
-	// Editor Styles
-	const Editor = (await import('./js/Editor.js')).default ;
-	const canvas = new Editor();
+	// Save RootApp !
+	canvas.keepChildAlive( '.editor-document-tools__left', RootApp ) ;
 
 	const { GlobalSignalReveal, GlobalSignalColor } = await import('./js/GlobalSignal.js') ;
 
@@ -60,7 +64,6 @@ async function BlockRevealBootstrap(){
 	const KeyboardShortcuts = (await import('./js/KeyboardShortcuts.js')).default ;
 	const keyboard = new KeyboardShortcuts();
 	keyboard.bind();
-
 }
 
 

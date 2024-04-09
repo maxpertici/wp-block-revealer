@@ -9,6 +9,7 @@ Requires PHP: 7.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
+Hightlight your blocks and stop clicking everywhere to find them.
 
 == Description ==
 Hightlight your blocks and stop clicking everywhere to find them.

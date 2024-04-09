@@ -4,7 +4,8 @@
   "description": "",
   "scripts": {
     "watch": "wp-scripts start src/block-revealer.js --output-path=dist --webpack-devtool=eval-source-map",
-    "build": "wp-scripts build src/block-revealer.js --output-path=dist --webpack-devtool=eval-source-map --mode=production"
+    "build": "wp-scripts build src/block-revealer.js --output-path=dist --webpack-devtool=eval-source-map --mode=production",
+    "playground" : "npx @wp-now/wp-now start --php=8.1 --blueprint=blueprint.json"
   },
   "keywords": [],
   "author": "",
@@ -15,6 +16,7 @@
     "@wordpress/hooks": "^3.54.0",
     "@wordpress/i18n": "^4.54.0",
     "@wordpress/scripts": "^26.15.0",
+    "@wp-now/wp-now": "^0.1.66",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },

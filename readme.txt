@@ -25,6 +25,10 @@ You can change the outline color with a richt click on the button too.
 
 == Changelog ==
 
+= 1.9.1 =
+* Fix default local storage color Value
+* Add Playground Support
+
 = 1.9 =
 * WP 6.5 compatibility
 * Add Iframed Editor Support

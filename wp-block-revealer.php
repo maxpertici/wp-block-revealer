@@ -3,7 +3,7 @@
 Plugin Name:  Block Revealer
 Plugin URI:   https://maxpertici.fr#block-revealer
 Description:  Reveal blocks of Gutenberg Editor (Keyboard shortcut available : Ctrl + Alt + R).
-Version:      1.9
+Version:      1.9.1
 Author:       @maxpertici
 Author URI:   https://maxpertici.fr
 Contributors:

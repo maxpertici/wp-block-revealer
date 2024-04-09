@@ -11,6 +11,10 @@ export default class Colors {
 	}
 
 
+	getColors(){
+		return this.colors ;
+	}
+
 	findColor( hex ){
 
 

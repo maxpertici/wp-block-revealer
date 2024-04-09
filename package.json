@@ -5,7 +5,8 @@
   "scripts": {
     "watch": "wp-scripts start src/block-revealer.js --output-path=dist --webpack-devtool=eval-source-map",
     "build": "wp-scripts build src/block-revealer.js --output-path=dist --webpack-devtool=eval-source-map --mode=production",
-    "playground" : "npx @wp-now/wp-now start --php=8.1 --blueprint=blueprint.json"
+    "playground" : "npx @wp-now/wp-now start",
+    "blueprint" : "npx @wp-now/wp-now start --php=8.1 --blueprint=blueprint.json"
   },
   "keywords": [],
   "author": "",

@@ -4,7 +4,7 @@ Donate link:
 Tags: Gutenberg, Blocks, UI,
 Requires at least: 5.9
 Tested up to: 6.5
-Stable tag: 1.9.1
+Stable tag: 1.9.2
 Requires PHP: 7.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -24,6 +24,9 @@ You can change the outline color with a richt click on the button too.
 
 
 == Changelog ==
+
+= 1.9.2 =
+* Fatal JS Fix. Sorry.
 
 = 1.9.1 =
 * Fix default local storage color Value

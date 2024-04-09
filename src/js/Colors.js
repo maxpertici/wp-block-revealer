@@ -12,7 +12,9 @@ export default class Colors {
 
 
 	getColors(){
-		return this.colors ;
+
+		// return colors object to array
+		return Object.values( this.colors ) ;
 	}
 
 	findColor( hex ){

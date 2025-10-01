@@ -2,9 +2,9 @@
 Contributors: maxpertici
 Donate link: 
 Tags: Gutenberg, Blocks, UI,
-Requires at least: 5.9
-Tested up to: 6.5
-Stable tag: 1.9.2
+Requires at least: 6.3
+Tested up to: 6.8.3 
+Stable tag: 2.0.0
 Requires PHP: 7.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -13,20 +13,20 @@ Hightlight your blocks and stop clicking everywhere to find them.
 
 == Description ==
 Hightlight your blocks and stop clicking everywhere to find them.
-Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) or with the button in the top bar.
-You can change the outline color with a richt click on the button too.
+Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) or with the plugin sidebar.
 
 [vimeo https://vimeo.com/515715026]
 
 == Installation ==
 1. Install the plugin and activate.
-2. Use shortcut : Ctrl + Alt + R or click on the dedicated button
-
+2. Discover the plugin sidebar or use shortcut : Ctrl + Alt + R
 
 == Changelog ==
 
 = 2.0.0 =
-* 
+* Add compatibility with the site editor
+* Remove the hacky button and use now the wp way plugin sidebar
+* Add custom color selector
 
 = 1.9.2 =
 * Fatal JS Fix. Sorry.

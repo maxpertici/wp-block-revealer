@@ -1,0 +1,46 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Block Revealer 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-block-revealer\n"
+"Last-Translator: \n"
+"Language-Team: Français\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-10-01T21:26:25+00:00\n"
+"PO-Revision-Date: 2025-10-01 21:39+0000\n"
+"Language: fr_FR\n"
+"X-Generator: Loco https://localise.biz/\n"
+"X-Domain: wp-block-revealer\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Loco-Version: 2.8.0; wp-6.8.3; php-8.3.19\n"
+
+#. Author of the plugin
+#: wp-block-revealer.php
+msgid "@maxpertici"
+msgstr "@maxpertici"
+
+#. Plugin Name of the plugin
+#: wp-block-revealer.php
+#: dist/block-revealer/editor.js:1868
+#: dist/block-revealer/editor.js:1870
+#: dist/block-revealer/editor.js:1764
+#: dist/block-revealer/editor.js:1767
+#: dist/block-revealer/editor.js:1
+msgid "Block Revealer"
+msgstr "Block Revealer"
+
+#. Author URI of the plugin
+#: wp-block-revealer.php
+msgid "https://maxpertici.fr"
+msgstr "https://maxpertici.fr"
+
+#. Plugin URI of the plugin
+#: wp-block-revealer.php
+msgid "https://maxpertici.fr#block-revealer"
+msgstr "https://maxpertici.fr#block-revealer"
+
+#. Description of the plugin
+#: wp-block-revealer.php
+msgid "Reveal blocks of Gutenberg Editor (Keyboard shortcut available : Ctrl + Alt + R)."
+msgstr "Révéler les blocs de l’éditeur Gutenberg (Raccourci clavier disponible : Ctrl + Alt + R)."

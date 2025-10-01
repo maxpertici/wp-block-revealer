@@ -117,10 +117,7 @@ const BlockRevealerPluginSidebar = () => {
                                         { __('Keyboard Shortcut', 'wp-block-revealer') }
                                     </Heading>
                                     <Text variant="muted" size="small">
-                                        { navigator.platform.toUpperCase().indexOf('MAC') >= 0
-                                            ? __( 'Use Cmd+Shift+R to toggle the block revealer on/off.', 'wp-block-revealer' )
-                                            : __( 'Use Ctrl+Shift+R to toggle the block revealer on/off.', 'wp-block-revealer' ) 
-                                        }
+                                        { __( 'Use Ctrl+Shift+R to toggle the block revealer on/off.', 'wp-block-revealer' )  }
                                     </Text>
                                 </VStack>
                             </FlexItem>

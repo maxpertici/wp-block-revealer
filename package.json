@@ -6,7 +6,9 @@
     "watch": "wp-scripts start sources/block-revealer/editor.js --output-path=dist/block-revealer --webpack-devtool=eval-source-map --webpack-src-dir=sources/block-revealer --webpack-copy-php  --stats=minimal --config ./webpack.config.js",
     "build": "wp-scripts build sources/block-revealer/editor.js --output-path=dist/block-revealer --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources/block-revealer --webpack-copy-php  --stats=minimal --config ./webpack.config.js",
     "playground": "npx @wp-now/wp-now start",
-    "blueprint": "npx @wp-now/wp-now start --php=8.1 --blueprint=blueprint.json"
+    "blueprint": "npx @wp-now/wp-now start --php=8.1 --blueprint=blueprint.json",
+    "i18n:create:pot" : "wp i18n make-pot . languages/wp-block-revealer.pot --exclude=sources,node_modules,vendor --merge=languages/wp-block-revealer.pot",
+    "i18n:create:json" : "wp i18n make-json languages"
   },
   "keywords": [],
   "author": "",

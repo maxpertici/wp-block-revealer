@@ -61,7 +61,7 @@ final class App extends Plugin {
 
 		wp_set_script_translations(
 			'editor-block-revealer-scripts',
-			'crt',
+			'wp-block-revealer',
 			$plugin_path . '/languages',
 		);
 

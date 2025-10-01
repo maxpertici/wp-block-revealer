@@ -1,10 +1,10 @@
 {
   "name": "block-revealer",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "",
   "scripts": {
-    "watch": "wp-scripts start src/block-revealer.js --output-path=dist --webpack-devtool=eval-source-map",
-    "build": "wp-scripts build src/block-revealer.js --output-path=dist --webpack-devtool=eval-source-map --mode=production",
+    "watch": "wp-scripts start sources/block-revealer/editor.js --output-path=dist/block-revealer --webpack-devtool=eval-source-map --webpack-src-dir=sources/block-revealer --webpack-copy-php  --stats=minimal --config ./webpack.config.js",
+    "build": "wp-scripts build sources/block-revealer/editor.js --output-path=dist/block-revealer --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources/block-revealer --webpack-copy-php  --stats=minimal --config ./webpack.config.js",
     "playground" : "npx @wp-now/wp-now start",
     "blueprint" : "npx @wp-now/wp-now start --php=8.1 --blueprint=blueprint.json"
   },
@@ -12,20 +12,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@wordpress/compose": "^6.31.0",
-    "@wordpress/element": "^5.31.0",
-    "@wordpress/hooks": "^3.54.0",
-    "@wordpress/i18n": "^4.54.0",
-    "@wordpress/scripts": "^26.15.0",
-    "@wp-now/wp-now": "^0.1.66",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "@wordpress/hooks": "^3.50.0",
+    "@wordpress/i18n": "^6.4.0",
+    "@wordpress/scripts": "^26.19.0",
+    "classnames": "^2.5.1"
   },
-  "dependencies": {
-    "@preact/signals-react": "^2.0.1",
-    "@wordpress/dom-ready": "^3.53.0",
-    "preact": "^10.20.1",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+  "dependencies": {}
 }

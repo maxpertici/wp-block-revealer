@@ -1,0 +1,10 @@
+{
+    "name": "mxp/block-revealer",
+    "require-dev": {},
+    "autoload": {
+      "files": [],
+      "psr-4": {
+        "MXP\\BlockRevealer\\": "app/"
+      }
+    }
+  }

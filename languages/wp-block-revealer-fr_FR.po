@@ -8,7 +8,7 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "POT-Creation-Date: 2025-10-01T21:26:25+00:00\n"
-"PO-Revision-Date: 2025-10-01 21:39+0000\n"
+"PO-Revision-Date: 2025-10-01 21:43+0000\n"
 "Language: fr_FR\n"
 "X-Generator: Loco https://localise.biz/\n"
 "X-Domain: wp-block-revealer\n"
@@ -22,10 +22,6 @@ msgstr "@maxpertici"
 
 #. Plugin Name of the plugin
 #: wp-block-revealer.php
-#: dist/block-revealer/editor.js:1868
-#: dist/block-revealer/editor.js:1870
-#: dist/block-revealer/editor.js:1764
-#: dist/block-revealer/editor.js:1767
 #: dist/block-revealer/editor.js:1
 msgid "Block Revealer"
 msgstr "Block Revealer"

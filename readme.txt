@@ -25,6 +25,9 @@ You can change the outline color with a richt click on the button too.
 
 == Changelog ==
 
+= 2.0.0 =
+* 
+
 = 1.9.2 =
 * Fatal JS Fix. Sorry.
 

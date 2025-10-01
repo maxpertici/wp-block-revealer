@@ -12,12 +12,15 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@wordpress/block-editor": "^15.5.0",
+    "@wordpress/components": "^30.5.0",
     "@wordpress/edit-post": "^8.31.0",
     "@wordpress/editor": "^14.31.0",
     "@wordpress/hooks": "^3.50.0",
     "@wordpress/i18n": "^6.4.0",
     "@wordpress/icons": "^10.31.0",
     "@wordpress/plugins": "^7.31.0",
+    "@wordpress/primitives": "^4.32.0",
     "@wordpress/scripts": "^26.19.0",
     "classnames": "^2.5.1"
   }

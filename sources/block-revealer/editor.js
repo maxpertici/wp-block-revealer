@@ -1,5 +1,5 @@
 
-import './slots/PluginSidebar.js';
-// import './slots/PluginMoreMenuItem.js';
+import './scss/editor.scss';
 
+import './slots/PluginSidebar.js';
 import './hooks/editor.BlockListBlock.js';

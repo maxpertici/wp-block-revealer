@@ -1,0 +1,31 @@
+
+.has-block-reveal {
+    --wpbr--editor--shadow--color : var( --wpbr--color, #1989c1 );
+}
+
+// BuildIn Colors
+.has-block-reveal-color-gray {
+    --wpbr--color : #b1b1b1;
+}
+
+.has-block-reveal-color-black {
+    --wpbr--color : #444343;
+}
+
+// Custom Colors
+// The custom color will be applied via the inline-defined custom property --wpbr--color.
+
+
+// Shadows
+.wp-block.has-block-reveal,
+*[class~="wp-block"].has-block-reveal{
+    box-shadow: 0 0 0 1px var( --wpbr--editor--shadow--color ) ;
+}
+.wp-block.has-block-reveal.is-selected,
+.is-hovered *.wp-block.has-block-reveal,
+.wp-block.is-hovered.has-block-reveal,
+*[class~="wp-block"].has-block-reveal.is-selected,
+.is-hovered *[class~="wp-block"].has-block-reveal,
+*[class~="wp-block"].is-hovered.has-block-reveal{
+    box-shadow: 0 0 0 3px var( --wpbr--editor--shadow--color ) ;
+}

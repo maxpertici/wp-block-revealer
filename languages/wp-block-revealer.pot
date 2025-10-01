@@ -1,0 +1,104 @@
+# Copyright (C) 2025 @maxpertici
+# This file is distributed under the GPLv2.
+msgid ""
+msgstr ""
+"Project-Id-Version: Block Revealer 2.0.0\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/wp-block-revealer\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2025-10-01T21:26:25+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.10.0\n"
+"X-Domain: wp-block-revealer\n"
+
+#. Plugin Name of the plugin
+#: wp-block-revealer.php
+#: dist/block-revealer/editor.js:1868
+#: dist/block-revealer/editor.js:1870
+#: dist/block-revealer/editor.js:1764
+#: dist/block-revealer/editor.js:1767
+msgid "Block Revealer"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: wp-block-revealer.php
+msgid "https://maxpertici.fr#block-revealer"
+msgstr ""
+
+#. Description of the plugin
+#: wp-block-revealer.php
+msgid "Reveal blocks of Gutenberg Editor (Keyboard shortcut available : Ctrl + Alt + R)."
+msgstr ""
+
+#. Author of the plugin
+#: wp-block-revealer.php
+msgid "@maxpertici"
+msgstr ""
+
+#. Author URI of the plugin
+#: wp-block-revealer.php
+msgid "https://maxpertici.fr"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1876
+#: dist/block-revealer/editor.js:1772
+msgid "Activation"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1877
+#: dist/block-revealer/editor.js:1775
+msgid "Reveal Blocks"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1878
+#: dist/block-revealer/editor.js:1778
+msgid "Block Revealer is enabled"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1878
+#: dist/block-revealer/editor.js:1779
+msgid "Block Revealer is disabled"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1882
+#: dist/block-revealer/editor.js:1788
+msgid "Appearance"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1885
+#: dist/block-revealer/editor.js:1792
+msgid "Blue"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1889
+#: dist/block-revealer/editor.js:1797
+msgid "Gray"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1893
+#: dist/block-revealer/editor.js:1802
+msgid "Black"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1900
+#: dist/block-revealer/editor.js:1811
+msgid "Color"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1916
+#: dist/block-revealer/editor.js:1825
+msgid "Keyboard Shortcut"
+msgstr ""
+
+#: dist/block-revealer/editor.js:1919
+#: dist/block-revealer/editor.js:1829
+msgid "Use Cmd+Shift+R to toggle the block revealer on/off."
+msgstr ""
+
+#: dist/block-revealer/editor.js:1919
+#: dist/block-revealer/editor.js:1830
+msgid "Use Ctrl+Shift+R to toggle the block revealer on/off."
+msgstr ""

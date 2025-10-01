@@ -20,6 +20,7 @@ final class App extends Plugin {
 	 */
 	public function init(){
 		add_action('init', [ $this, 'loadTranslations' ]);
+		add_action( 'enqueue_block_editor_assets', [ $this, 'editorEnqueues' ] );
 	}
 
 

@@ -4,8 +4,8 @@ Donate link:
 Tags: Gutenberg, Blocks, UI,
 Requires at least: 6.3
 Tested up to: 6.8.3 
-Stable tag: 2.0.0
-Requires PHP: 7.0
+Stable tag: 2.0.1
+Requires PHP: 7.4
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -22,6 +22,9 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) or with the plu
 2. Discover the plugin sidebar or use shortcut : Ctrl + Alt + R
 
 == Changelog ==
+
+= 2.0.1 =
+* FIX Fatal on singleton on older PHP version
 
 = 2.0.0 =
 * Add compatibility with the site editor

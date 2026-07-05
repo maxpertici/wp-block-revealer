@@ -137,7 +137,7 @@ const BlockRevealerPluginSidebar = () => {
 								<Icon
 									icon={info}
 									size={20}
-									style={{ color: '#0073aa' }}
+									style={{ color: '#3858e9' }}
 								/>
 							</FlexItem>
 							<FlexItem>

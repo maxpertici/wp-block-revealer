@@ -68,7 +68,7 @@ final class App extends Plugin {
 		wp_enqueue_script(
 			'editor-block-revealer-scripts',
 			$plugin_url . '/dist/block-revealer/editor.js',
-			 $asset_file['dependencies'],
+			$asset_file['dependencies'],
 			$asset_file['version'],
 			true,
 		);

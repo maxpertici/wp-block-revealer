@@ -12,13 +12,11 @@ class Plugin extends Singleton {
 	protected $mainPluginFilePath = null ;
 
 	public function createFromFile(  $mainPluginFilePath = null  ){
-		
 		if( is_null( $mainPluginFilePath ) ){ return ; }
-		$this->mainPluginFilePath = $mainPluginFilePath ;
 
+		$this->mainPluginFilePath = $mainPluginFilePath ;
 		$this->setDirectoryPath( $mainPluginFilePath ) ;
 		$this->setPluginUrl();
-		
 		add_action('init', [$this, 'setVersion']);
 	}
 

@@ -1,4 +1,3 @@
-
 import { SVG, Path, Rect } from '@wordpress/primitives';
 
 const BlockRevealerIcon = (
@@ -18,7 +17,7 @@ const BlockRevealerIcon = (
 			stroke="currentColor"
 			strokeWidth="2"
 		/>
-		
+
 		{/* Lignes de texte */}
 		<Path
 			d="M3 14h12"
@@ -26,21 +25,21 @@ const BlockRevealerIcon = (
 			strokeWidth="2"
 			strokeLinecap="round"
 		/>
-		
+
 		<Path
 			d="M3 18h12"
 			stroke="currentColor"
 			strokeWidth="2"
 			strokeLinecap="round"
 		/>
-		
+
 		<Path
 			d="M3 22h12"
 			stroke="currentColor"
 			strokeWidth="2"
 			strokeLinecap="round"
 		/>
-		
+
 		{/* Bloc de révélation */}
 		<Rect
 			x="18"

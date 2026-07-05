@@ -69,9 +69,5 @@ final class App extends Plugin {
 			'editor-block-revealer-styles',
 			$plugin_url . '/dist/block-revealer/editor.css',
 		);
-
-		// wp_add_inline_style( 'editor-block-revealer-styles', '' );
-
 	}
-
 }

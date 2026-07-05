@@ -1,4 +1,7 @@
 <?php
+/**
+ * Singleton utility class.
+ */
 
 namespace MXP\BlockRevealer\Utils;
 
@@ -7,11 +10,18 @@ namespace MXP\BlockRevealer\Utils;
  */
 abstract class Singleton {
 
+	/**
+	 * Constructor.
+	 *
+	 * To override in child classes.
+	 */
 	protected function __construct() {
-		// to override in child classes
+		// To override in child classes.
 	}
 
-	// prevent cloning
+	/**
+	 * Prevent cloning.
+	 */
 	private function __clone() {}
 
 	/**

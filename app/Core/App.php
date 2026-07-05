@@ -1,7 +1,13 @@
 <?php
+/**
+ * Application bootstrap class.
+ */
 
 namespace MXP\BlockRevealer\Core;
 
+/**
+ * Main plugin application.
+ */
 final class App extends Plugin {
 
 	/**
@@ -19,7 +25,7 @@ final class App extends Plugin {
 	 * @return void
 	 */
 	public function init(): void {
-		add_action('init', [ $this, 'loadTranslations' ]);
+		add_action( 'init', [ $this, 'loadTranslations' ] );
 		add_action( 'enqueue_block_assets', [ $this, 'editorEnqueues' ] );
 	}
 
@@ -39,23 +45,25 @@ final class App extends Plugin {
 
 	/**
 	 * Enqueue block editor assets.
+	 *
 	 * @return void
 	 */
 	public function editorEnqueues(): void {
 
-		if( ! is_admin() ){
-			return ;
+		if ( ! is_admin() ) {
+			return;
 		}
 
 		$plugin_path = untrailingslashit( $this->directoryPath );
 		$plugin_url  = untrailingslashit( $this->pluginUrl );
-		$asset_file = include untrailingslashit( $this->directoryPath ) . '/dist/block-revealer/editor.asset.php';
+		$asset_file  = include untrailingslashit( $this->directoryPath ) . '/dist/block-revealer/editor.asset.php';
 
 		wp_enqueue_script(
 			'editor-block-revealer-scripts',
 			$plugin_url . '/dist/block-revealer/editor.js',
 			$asset_file['dependencies'],
 			$asset_file['version'],
+			true,
 		);
 
 		wp_localize_script( 'editor-block-revealer-scripts', 'customWidths', $this->settings ?? [] );
@@ -69,6 +77,8 @@ final class App extends Plugin {
 		wp_enqueue_style(
 			'editor-block-revealer-styles',
 			$plugin_url . '/dist/block-revealer/editor.css',
+			[],
+			$asset_file['version'],
 		);
 	}
 }

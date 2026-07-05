@@ -1,29 +1,30 @@
 {
   "name": "block-revealer",
-  "version": "2.0.0",
+  "version": "2.0.2",
   "description": "",
   "scripts": {
-    "watch": "wp-scripts start sources/block-revealer/editor.js --output-path=dist/block-revealer --webpack-devtool=eval-source-map --webpack-src-dir=sources/block-revealer --webpack-copy-php  --stats=minimal --config ./webpack.config.js",
-    "build": "wp-scripts build sources/block-revealer/editor.js --output-path=dist/block-revealer --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources/block-revealer --webpack-copy-php  --stats=minimal --config ./webpack.config.js",
+    "start": "wp-scripts start editor.js --output-path=dist/block-revealer --webpack-devtool=eval-source-map --webpack-src-dir=sources/block-revealer --webpack-copy-php  --stats=minimal",
+    "build": "wp-scripts build editor.js --output-path=dist/block-revealer --webpack-devtool=eval-source-map --mode=production --webpack-src-dir=sources/block-revealer --webpack-copy-php  --stats=minimal",
+    "format": "wp-scripts format ./sources/block-revealer --ignore-patterns='**/node_modules/**' --ignore-patterns='**/vendor/**' --ignore-patterns='**/dist/**'",
     "playground": "npx @wp-now/wp-now start",
     "blueprint": "npx @wp-now/wp-now start --php=8.1 --blueprint=blueprint.json",
-    "i18n:create:pot" : "wp i18n make-pot . languages/wp-block-revealer.pot --exclude=sources,node_modules,vendor --merge=languages/wp-block-revealer.pot",
-    "i18n:create:json" : "wp i18n make-json languages"
+    "i18n:create:pot": "wp i18n make-pot . languages/wp-block-revealer.pot --exclude=sources,node_modules,vendor --merge=languages/wp-block-revealer.pot",
+    "i18n:create:json": "wp i18n make-json languages"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@wordpress/block-editor": "^15.5.0",
-    "@wordpress/components": "^30.5.0",
-    "@wordpress/edit-post": "^8.31.0",
-    "@wordpress/editor": "^14.31.0",
-    "@wordpress/hooks": "^3.50.0",
-    "@wordpress/i18n": "^6.4.0",
-    "@wordpress/icons": "^10.31.0",
-    "@wordpress/plugins": "^7.31.0",
-    "@wordpress/primitives": "^4.32.0",
-    "@wordpress/scripts": "^26.19.0",
+    "@wordpress/block-editor": "^15.23.0",
+    "@wordpress/components": "^36.1.0",
+    "@wordpress/edit-post": "^8.50.0",
+    "@wordpress/editor": "^14.50.0",
+    "@wordpress/hooks": "^4.50.0",
+    "@wordpress/i18n": "^6.23.0",
+    "@wordpress/icons": "^15.1.0",
+    "@wordpress/plugins": "^7.50.0",
+    "@wordpress/primitives": "^4.50.0",
+    "@wordpress/scripts": "^32.6.0",
     "classnames": "^2.5.1"
   }
 }

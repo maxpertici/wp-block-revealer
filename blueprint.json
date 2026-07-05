@@ -15,7 +15,7 @@
             "step": "installPlugin",
             "pluginZipFile": {
                 "resource": "url",
-                "url": "https:\/\/downloads.wordpress.org\/plugin\/wp-block-revealer.2.0.1.zip"
+                "url": "https:\/\/downloads.wordpress.org\/plugin\/wp-block-revealer.2.0.2.zip"
             },
             "options": {
                 "activate": true

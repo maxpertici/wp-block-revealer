@@ -19,7 +19,7 @@ import { useSelect, useDispatch } from '@wordpress/data';
 import { keyboardShortcuts } from '../components/keyboardShortcuts.js';
 
 const BlockRevealerPluginSidebar = () => {
-	const defaultBlue = '#1989c1';
+	const defaultBlue = '#3858e9';
 
 	const { set } = useDispatch('core/preferences');
 

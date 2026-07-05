@@ -22,7 +22,8 @@ function addClasses(BlockListBlock) {
 		);
 		const revealColorName = useSelect(
 			(select) =>
-				select(preferencesStore).get('wp-block-revealer', 'colorName'),
+				select(preferencesStore).get('wp-block-revealer', 'colorName') ??
+				'blue',
 			[]
 		);
 		const revealColor = useSelect(
@@ -38,17 +39,27 @@ function addClasses(BlockListBlock) {
 
 		// Gérer l'injection CSS avec useEffect pour compatibilité iframe
 		useEffect(() => {
-			if (isReveal && revealColor) {
+			const styleElementId = 'wp-block-revealer-custom-color';
+
+			const removeCustomCSS = (targetDocument) => {
+				const customStyleElement = targetDocument.getElementById(
+					styleElementId
+				);
+				if (customStyleElement) {
+					customStyleElement.remove();
+				}
+			};
+
+			if (isReveal && revealColorName === 'custom' && revealColor) {
 				// Injecter le CSS dans tous les documents possibles (iframe + document principal)
 				const injectCustomCSS = (targetDocument) => {
 					let customStyleElement = targetDocument.getElementById(
-						'wp-block-revealer-custom-color'
+						styleElementId
 					);
 					if (!customStyleElement) {
 						customStyleElement =
 							targetDocument.createElement('style');
-						customStyleElement.id =
-							'wp-block-revealer-custom-color';
+						customStyleElement.id = styleElementId;
 						targetDocument.head.appendChild(customStyleElement);
 					}
 					customStyleElement.textContent = `
@@ -68,6 +79,17 @@ function addClasses(BlockListBlock) {
 				iframes.forEach((iframe) => {
 					if (iframe.contentDocument) {
 						injectCustomCSS(iframe.contentDocument);
+					}
+				});
+			} else {
+				// Nettoyage si on n'est plus en couleur custom.
+				removeCustomCSS(document);
+				const iframes = document.querySelectorAll(
+					'iframe[name="editor-canvas"]'
+				);
+				iframes.forEach((iframe) => {
+					if (iframe.contentDocument) {
+						removeCustomCSS(iframe.contentDocument);
 					}
 				});
 			}

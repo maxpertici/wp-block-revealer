@@ -1,5 +1,5 @@
 import { PluginSidebar, PluginSidebarMoreMenuItem } from '@wordpress/editor';
-import { InspectorControls, PanelColorSettings } from '@wordpress/block-editor';
+import { PanelColorSettings } from '@wordpress/block-editor';
 import { registerPlugin } from '@wordpress/plugins';
 import { BlockRevealerIcon } from '../components/icon.js';
 import { __ } from '@wordpress/i18n';
@@ -20,6 +20,7 @@ import { keyboardShortcuts } from '../components/keyboardShortcuts.js';
 
 const BlockRevealerPluginSidebar = () => {
 	const defaultBlue = '#3858e9';
+	const defaultColorName = 'blue';
 
 	const { set } = useDispatch('core/preferences');
 
@@ -39,21 +40,17 @@ const BlockRevealerPluginSidebar = () => {
 
 	// Color
 	const revealColor = useSelect((select) => {
-		return (
-			select('core/preferences').get('wp-block-revealer', 'color') ??
-			defaultBlue
-		);
-	}, []);
-
-	// Color slug
-	const revealColorSlug = useSelect((select) => {
-		return (
-			select('core/preferences').get('wp-block-revealer', 'colorSlug') ??
-			'blue'
-		);
+		return select('core/preferences').get('wp-block-revealer', 'color');
 	}, []);
 
 	const handleColorChange = (newColor) => {
+		// Laisser la valeur vide lors du reset pour que le sélecteur reste bien synchronisé.
+		if (!newColor) {
+			set('wp-block-revealer', 'color', undefined);
+			set('wp-block-revealer', 'colorName', defaultColorName);
+			return;
+		}
+
 		set('wp-block-revealer', 'color', newColor);
 
 		// Trouve le slug correspondant à la couleur
@@ -64,6 +61,7 @@ const BlockRevealerPluginSidebar = () => {
 		};
 
 		const slug = colorMap[newColor] || 'custom';
+
 		set('wp-block-revealer', 'colorName', slug);
 	};
 

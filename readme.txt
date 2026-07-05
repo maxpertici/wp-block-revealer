@@ -4,7 +4,7 @@ Donate link:
 Tags: Gutenberg, Blocks, UI,
 Requires at least: 6.3
 Tested up to: 7.0 
-Stable tag: 2.0.2
+Stable tag: 2.1.0
 Requires PHP: 8.0
 License: GPLv2
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
@@ -22,6 +22,10 @@ Reveal your blocks with a new keyboard shortcut (Ctrl + Alt + R) or with the plu
 2. Discover the plugin sidebar or use shortcut : Ctrl + Alt + R
 
 == Changelog ==
+
+= 2.1.0 =
+* Fix wp6.3 support
+* Bump PHP version minium to 8.0
 
 = 2.0.2 =
 * Fix color selector selection and reset

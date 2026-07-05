@@ -9,7 +9,7 @@ final class App extends Plugin {
 	 *
 	 * @return void
 	 */
-	public function load() {
+	public function load(): void {
 		add_action( 'plugins_loaded', [ $this, 'init' ] );
 	}
 
@@ -18,7 +18,7 @@ final class App extends Plugin {
 	 *
 	 * @return void
 	 */
-	public function init(){
+	public function init(): void {
 		add_action('init', [ $this, 'loadTranslations' ]);
 		add_action( 'enqueue_block_editor_assets', [ $this, 'editorEnqueues' ] );
 	}
@@ -29,7 +29,7 @@ final class App extends Plugin {
 	 *
 	 * @return void
 	 */
-	public function loadTranslations(){
+	public function loadTranslations(): void {
 		$locale = get_user_locale();
 		$locale = apply_filters( 'plugin_locale', $locale, 'wp-block-revealer' );
 		load_textdomain( 'wp-block-revealer', WP_LANG_DIR . '/plugins/wp-block-revealer-' . $locale . '.mo' );
@@ -39,8 +39,9 @@ final class App extends Plugin {
 
 	/**
 	 * Enqueue block editor assets.
+	 * @return void
 	 */
-	public function editorEnqueues(){
+	public function editorEnqueues(): void {
 
 		if( ! is_admin() ){
 			return ;

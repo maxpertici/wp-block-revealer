@@ -11,7 +11,13 @@ class Plugin extends Singleton {
 	protected $directoryPath = null ;
 	protected $mainPluginFilePath = null ;
 
-	public function createFromFile(  $mainPluginFilePath = null  ){
+	/**
+	 * Create plugin instance from main plugin file.
+	 *
+	 * @param string|null $mainPluginFilePath
+	 * @return void
+	 */
+	public function createFromFile(  $mainPluginFilePath = null  ): void {
 		if( is_null( $mainPluginFilePath ) ){ return ; }
 
 		$this->mainPluginFilePath = $mainPluginFilePath ;
@@ -20,7 +26,12 @@ class Plugin extends Singleton {
 		add_action('init', [$this, 'setVersion']);
 	}
 
-	public function setVersion(){
+	/**
+	 * Set plugin version from main plugin file.
+	 *
+	 * @return void
+	 */
+	public function setVersion(): void{
 		if( ! function_exists('get_plugin_data') ){
 			require_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 		}
@@ -28,20 +39,41 @@ class Plugin extends Singleton {
 		$this->version = $plugin_data['Version'] ;
 	}
 
-	private function setPluginUrl() {
+	/**
+	 * Set plugin URL.
+	 *
+	 * @return void
+	 */
+	private function setPluginUrl(): void {
 		if( is_null($this->directoryPath) ){ return ; }
 		$this->pluginUrl = trailingslashit( plugin_dir_url( $this->directoryPath ) . 'wp-block-revealer' ) ;
 	}
 
-	private function setDirectoryPath( $mainPluginFilePath ){
+	/**
+	 * Set plugin directory path.
+	 *
+	 * @param string $mainPluginFilePath
+	 * @return void
+	 */
+	private function setDirectoryPath( $mainPluginFilePath ): void {
 		$this->directoryPath = trailingslashit( dirname( $mainPluginFilePath ) );
 	}
 
-	public function getVersion(){
+	/**
+	 * Get plugin Version.
+	 *
+	 * @return string
+	 */
+	public function getVersion(): string {
 		return $this->version;
 	}
 
-	public function getDirectoryPath(){
+	/**
+	 * Get plugin directory path.
+	 *
+	 * @return string
+	 */
+	public function getDirectoryPath(): string {
 		return $this->directoryPath;
 	}
 }

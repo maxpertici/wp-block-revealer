@@ -19,7 +19,7 @@ abstract class Singleton {
 	 *
 	 * @return static the child class
 	 */
-	final public static function instance() {
+	final public static function instance(): static {
 		static $_instance = [];
 
 		$called_class = get_called_class();

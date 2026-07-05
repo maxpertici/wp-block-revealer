@@ -1,0 +1,31 @@
+{
+  "presets": [
+    [
+      "@babel/preset-env",
+      {
+        "bugfixes": true,
+        "modules": false
+      }
+    ],
+    "@babel/preset-typescript"
+  ],
+  "plugins": [
+    "@babel/plugin-syntax-import-attributes",
+    "@wordpress/warning/babel-plugin",
+    [
+      "@babel/plugin-transform-react-jsx",
+      {
+        "runtime": "classic",
+        "pragma": "wp.element.createElement",
+        "pragmaFrag": "wp.element.Fragment"
+      }
+    ],
+    [
+      "@babel/plugin-transform-runtime",
+      {
+        "helpers": true,
+        "useESModules": false
+      }
+    ]
+  ]
+}

@@ -1,14 +1,12 @@
-import { SVG, Path, Rect } from '@wordpress/primitives';
-
 const BlockRevealerIcon = (
-	<SVG
+	<svg
 		width={24}
 		height={24}
 		viewBox="0 0 28 26"
 		xmlns="http://www.w3.org/2000/svg"
 	>
 		{/* Rectangle principal */}
-		<Rect
+		<rect
 			x="4"
 			y="4"
 			width="20"
@@ -19,21 +17,21 @@ const BlockRevealerIcon = (
 		/>
 
 		{/* Lignes de texte */}
-		<Path
+		<path
 			d="M3 14h12"
 			stroke="currentColor"
 			strokeWidth="2"
 			strokeLinecap="round"
 		/>
 
-		<Path
+		<path
 			d="M3 18h12"
 			stroke="currentColor"
 			strokeWidth="2"
 			strokeLinecap="round"
 		/>
 
-		<Path
+		<path
 			d="M3 22h12"
 			stroke="currentColor"
 			strokeWidth="2"
@@ -41,7 +39,7 @@ const BlockRevealerIcon = (
 		/>
 
 		{/* Bloc de révélation */}
-		<Rect
+		<rect
 			x="18"
 			y="14"
 			width="6"
@@ -50,7 +48,7 @@ const BlockRevealerIcon = (
 			stroke="currentColor"
 			strokeWidth="2"
 		/>
-	</SVG>
+	</svg>
 );
 
 export { BlockRevealerIcon };

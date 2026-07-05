@@ -1,20 +1,17 @@
-import { PluginSidebar, PluginSidebarMoreMenuItem } from '@wordpress/editor';
+import { PluginSidebar, PluginSidebarMoreMenuItem } from '@wordpress/edit-post';
 import { PanelColorSettings } from '@wordpress/block-editor';
 import { registerPlugin } from '@wordpress/plugins';
 import { BlockRevealerIcon } from '../components/icon.js';
 import { __ } from '@wordpress/i18n';
+import { Fragment } from '@wordpress/element';
 import {
 	PanelBody,
 	ToggleControl,
 	BaseControl,
-	__experimentalVStack as VStack,
-	__experimentalText as Text,
-	__experimentalHeading as Heading,
-	Icon,
+	Dashicon,
 	Flex,
 	FlexItem,
 } from '@wordpress/components';
-import { info } from '@wordpress/icons';
 import { useSelect, useDispatch } from '@wordpress/data';
 import { keyboardShortcuts } from '../components/keyboardShortcuts.js';
 
@@ -66,7 +63,7 @@ const BlockRevealerPluginSidebar = () => {
 	};
 
 	return (
-		<>
+		<Fragment>
 			<PluginSidebarMoreMenuItem target="wp-block-revealer-sidebar">
 				{__('Block Revealer', 'wp-block-revealer')}
 			</PluginSidebarMoreMenuItem>
@@ -76,10 +73,7 @@ const BlockRevealerPluginSidebar = () => {
 				title={__('Block Revealer', 'wp-block-revealer')}
 			>
 				<PanelBody>
-					<VStack spacing={4}>
-						<Heading level={4} size="small">
-							{__('Activation', 'wp-block-revealer')}
-						</Heading>
+					<h3>{__('Activation', 'wp-block-revealer')}</h3>
 						<ToggleControl
 							label={__('Reveal Blocks', 'wp-block-revealer')}
 							help={
@@ -96,7 +90,6 @@ const BlockRevealerPluginSidebar = () => {
 							checked={isRevealEnabled}
 							onChange={handleToggleChange}
 						/>
-					</VStack>
 				</PanelBody>
 
 				<PanelColorSettings
@@ -132,33 +125,24 @@ const BlockRevealerPluginSidebar = () => {
 					<BaseControl>
 						<Flex align="flex-start" gap={4}>
 							<FlexItem>
-								<Icon
-									icon={info}
-									size={20}
-									style={{ color: '#3858e9' }}
-								/>
+								<Dashicon icon="info-outline" style={{ color: '#3858e9' }} />
 							</FlexItem>
 							<FlexItem>
-								<VStack spacing={2}>
-									<Heading level={5} size="small">
-										{__(
-											'Keyboard Shortcut',
-											'wp-block-revealer'
-										)}
-									</Heading>
-									<Text variant="muted" size="small">
-										{__(
-											'Use Ctrl+Shift+R to toggle the block revealer on/off.',
-											'wp-block-revealer'
-										)}
-									</Text>
-								</VStack>
+								<h4 style={{ marginTop: 0 }}>
+									{__('Keyboard Shortcut', 'wp-block-revealer')}
+								</h4>
+								<p>
+									{__(
+										'Use Ctrl+Shift+R to toggle the block revealer on/off.',
+										'wp-block-revealer'
+									)}
+								</p>
 							</FlexItem>
 						</Flex>
 					</BaseControl>
 				</PanelBody>
 			</PluginSidebar>
-		</>
+		</Fragment>
 	);
 };
 
